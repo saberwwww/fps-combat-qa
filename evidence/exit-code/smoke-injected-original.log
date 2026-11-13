@@ -1,0 +1,319 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+Missions: loaded 7 mission(s)
+SMOKE: start
+SMOKE: missions loaded = 7
+SMOKE: weapons = ["rifle", "smg", "shotgun", "sniper", "pistol"]
+SMOKE: host_game = true is_host=true
+WARNING: Source geometry parsing for navigation mesh baking had to parse RenderingServer meshes at runtime.
+		This poses a significant performance issues as visual meshes store geometry data on the GPU and transferring this data back to the CPU blocks the rendering.
+		For runtime (re)baking navigation meshes use and parse collision shapes as source geometry or create geometry data procedurally in scripts.
+     at: add_mesh (scene/resources/3d/navigation_mesh_source_geometry_data_3d.cpp:204)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:86)
+         [2] _ready (res://scripts/world/world.gd:46)
+         [3] _ready (res://tests/smoke.gd:32)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:86)
+         [2] _ready (res://scripts/world/world.gd:46)
+         [3] _ready (res://tests/smoke.gd:32)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:86)
+         [2] _ready (res://scripts/world/world.gd:46)
+         [3] _ready (res://tests/smoke.gd:32)
+ERROR: NavigationServer navigation map query failed because it was made before first map synchronization.
+	NavigationServer 'map_changed' signal can be used to receive update notifications.
+	NavigationServer 'map_get_iteration_id()' can be used to check if a map has finished its newest iteration.
+   at: get_closest_point (modules/navigation_3d/nav_map_3d.cpp:196)
+   GDScript backtrace (most recent call first):
+       [0] _pick_patrol_point (res://scripts/ai/bot.gd:726)
+       [1] _do_patrol (res://scripts/ai/bot.gd:692)
+       [2] _physics_process (res://scripts/ai/bot.gd:440)
+SMOKE: players=1 bots=4 nav_regions=1 zones=4
+SMOKE: scoreboard rows=5
+SMOKE: bots_positioned=true
+SMOKE: weapon=rifle ammo before/after=30/29
+SMOKE: minimap_ok=true size=(190.0, 190.0)
+SMOKE: spawn_clearance_ok=true
+SMOKE: headshot_hitbox_ok=true aligned=true
+SMOKE: crouch_ok=true
+SMOKE: hitbox_edge_coverage_ok=true
+SMOKE: grenade_ok=true
+SMOKE: nade_fx_ok=true particle_systems=2
+SMOKE: collect_ok=true progress=2 text='  (2/4)'
+SMOKE: settings_ok=true
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:277)
+SMOKE: tree_ok=true wood=2 rock=true stone_recipe=true trash=true
+SMOKE: extras_ok=true torch=true burns=true feeds=true money=true recruit=true follower_fights=true shovel=true dig=true melee=true pistol_inf=true kill_cash=true witness=true boat=true island=true giant=true giant_melee=true scrap=true healthbar=true bot_dmg=true tuning=true
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:540)
+SMOKE: preset_ok=true defs=true polys=5019 poi=9
+SMOKE: music_ok=true bus=true
+SMOKE: wildlife_ok=true combatant=true drops=1 los_clear=true los_blocked=true
+SMOKE: archetype_ok=true
+SMOKE: craft_ok=true bandage=true medkit=true cook_blocked=true cook_ok=true
+SMOKE: nade_type_ok=true count=true c1=true smoke_kept=true c2=true frag_gone=true
+SMOKE: gear_ok=true defs=true equip=true on=true off=true glass=true scan=true gtype=true field=true stun=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:750)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:750)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+SMOKE: immersion_ok=true quality=true reverb=true shake=true env=true blood=true
+SMOKE: enemy_variety_ok=true
+SMOKE: pickups=13 pickup_ok=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:788)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:788)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+SMOKE: highlands polys=201 spawn_heights=3 ok=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:804)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:804)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:804)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:804)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:804)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:804)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+SMOKE: new_maps_ok=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:817)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:817)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+SMOKE: building_interior_navigable=true
+SMOKE: killfeed_ok=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:843)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:843)
+SMOKE: outpost bake_ms=61 polys=310 vehicles=6
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+SMOKE: vehicle_drive_ok=true moved=6.8 smoke_ok=true destroy_ok=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:890)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:890)
+WARNING: A navigation mesh that uses a `cell_size` of 0.25 was assigned to a navigation map set to a larger `cell_size` of 2.84444451332092.
+This mismatch in cell size can cause rasterization errors with navigation mesh edges on the navigation map.
+The cell size for navigation maps can be changed by using the NavigationServer map_set_cell_size() function.
+The cell size for default navigation maps can also be changed in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_cell_size_mismatch' in the project settings.
+     at: set_navigation_mesh (modules/navigation_3d/nav_region_3d.cpp:110)
+SMOKE: car_variants=4 variant_ok=true handling_variety=4
+SMOKE: flip up before/after=-1.0/1.0 flip_ok=true
+SMOKE: bullet_hole_ok=true
+SMOKE: crash_damage_ok=true (350.0 -> 265.0)
+SMOKE: helicopter_ok=true climb=5.0
+SMOKE: bot_shoots_vehicle_ok=true (350.0 -> 331.1)
+SMOKE: domination_ok=true counts=[1, 0]
+SMOKE: team_helpers_ok=true
+SMOKE: team_scoreboard_ok=true
+SMOKE: coop_revive_ok=true lives=6
+SMOKE: objectives_ok=true dmg=true destroyed=true escort=true boss=true
+SMOKE: battle_royale_ok=true geom=true storm_dmg=true name=true no_false_end=true tag_hidden=true
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:1116)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:1116)
+SMOKE: wasteland_ok=true bake_ms=174 polys=1654 spawns=20 vehicles=11
+SMOKE: survival_ok=true helpers=true drain=true starve=true restore=true tag_hidden=true
+SMOKE: safe_zone_ok=true village=true player=true
+SMOKE: inventory_ok=true add=true overlap=true size=true cap=true rot=true use=true drop=true
+SMOKE: debug_ok=true stat=true spawn=true nc_on=true nc_off=true
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:1255)
+SMOKE: terrain_ok=true bake_ms=207 polys=3059 spawns=20 poi=5 water=1 collision=true vehicles=5 map_tex=true navlinks=3
+SMOKE: landform_ok=true sel=true table=true relief=true roll_range=123 plain_range=54
+SMOKE: features_ok=true canon=true extract=true shape=true near=true
+SMOKE: comfyui_ok=true off=true key=true path=true seed=true wf=true no3d=true hist=true model=true
+SMOKE: survival_start_ok=true empty=true equip=true slot=true
+SMOKE: inv_ui_ok=true blocked=true moved=true bound=true
+SMOKE: factions_ok=true raider=true self=true provoke=true vv=true spawn=true activation=true
+SMOKE: npc_ident_ok=true name=true role=true greet=true
+SMOKE: npc_negotiate_ok=true heal=true give=true follow=true wait=true regroup=true refuse=true
+SMOKE: quests_ok=true hunt=true offer=true accept=true tracker=true
+SMOKE: missions_ok=true diff_pts=true types=true label=true
+SMOKE: dynamic_ok=true clean_start=true trickle=true expire=true courier_fail=true distress=true types=true
+SMOKE: improve_ok=true perks=true buy=true papply=true value=true coins=true env=true marker=true snap=true restore=true
+SMOKE: nade_item_ok=true added=3 count0=true noeq=true eq=true a1=true a2=true a3=true
+SMOKE: story_ok=true fallback=true parse=true names_parse=true names=true llm=true
+SMOKE: faction_names_ok=true gen=true set=true stance=true parse=true
+SMOKE: equip_ok=true armor=true buffered=true head=true broke=true gun=true unequip=true
+SMOKE: loadout_ok=true fill=true hole=true refill=true replace=true move=true switch=true ammo=true swap=true
+SMOKE: pistol_start_ok=true
+SMOKE: stats_ok=true shots=true rows=true quest_event=true
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:1981)
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:2001)
+SMOKE: terrain_depth_ok=true biomes=5 props=431 mm=true determinism=true
+SMOKE: swim_ok=true drain=true regen=true drown=true
+WARNING: Navigation region synchronization had 4 edge error(s).
+More than 2 edges tried to occupy the same map rasterization space.
+This causes a logical error in the navigation mesh geometry and is commonly caused by overlap or too densely placed edges.
+Consider baking with a higher 'cell_size', greater geometry margin, and less detailed bake objects to cause fewer edges.
+Consider lowering the 'navigation/3d/merge_rasterizer_cell_scale' in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_edge_merge_errors' in the project settings.
+     at: _build_step_find_edge_connection_pairs (modules/navigation_3d/3d/nav_region_builder_3d.cpp:221)
+WARNING: Navigation region synchronization had 4 edge error(s).
+More than 2 edges tried to occupy the same map rasterization space.
+This causes a logical error in the navigation mesh geometry and is commonly caused by overlap or too densely placed edges.
+Consider baking with a higher 'cell_size', greater geometry margin, and less detailed bake objects to cause fewer edges.
+Consider lowering the 'navigation/3d/merge_rasterizer_cell_scale' in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_edge_merge_errors' in the project settings.
+     at: _build_step_find_edge_connection_pairs (modules/navigation_3d/3d/nav_region_builder_3d.cpp:221)
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:2043)
+SMOKE: ladder_ok=true ladders=3 detect=true
+WARNING: Navigation region synchronization had 4 edge error(s).
+More than 2 edges tried to occupy the same map rasterization space.
+This causes a logical error in the navigation mesh geometry and is commonly caused by overlap or too densely placed edges.
+Consider baking with a higher 'cell_size', greater geometry margin, and less detailed bake objects to cause fewer edges.
+Consider lowering the 'navigation/3d/merge_rasterizer_cell_scale' in the project settings.
+This warning can be toggled under 'navigation/3d/warnings/navmesh_edge_merge_errors' in the project settings.
+     at: _build_step_find_edge_connection_pairs (modules/navigation_3d/3d/nav_region_builder_3d.cpp:221)
+SMOKE: bot_swim_ok=true
+SMOKE: characters_ok=true create=true apply=true capture=true delete=true
+SMOKE: quest_mark_ok=true kill=true cleared=true giver=true
+SMOKE: pickup_shape_ok=true meshes=3
+SMOKE: fall_ok=true hard_hp=34.0 soft_hp=100.0
+SMOKE: snap_ok=true
+SMOKE: death_drop_ok=true
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:372)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _ready (res://tests/smoke.gd:2213)
+SMOKE: tiny_map_ok=true polys=1389 poi=3
+SMOKE: ai_models_ok=true presets=4
+SMOKE: fire_works=true damage_signal=true damage_number=true hit_flash=true audio=true headshot=true highlands=true
+SMOKE: DONE ok=false
+ERROR: 1 RID allocations of type 'P11GodotBody3D' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 7 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

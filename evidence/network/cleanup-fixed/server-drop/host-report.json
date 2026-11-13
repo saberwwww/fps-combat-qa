@@ -1,0 +1,8 @@
+{
+	"checks": 0,
+	"failed": 0,
+	"results": [],
+	"role": "host",
+	"scenario": "server-drop",
+	"suite": "network"
+}

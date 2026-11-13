@@ -1,0 +1,13 @@
+{
+  "command": [
+    "curl",
+    "-fL",
+    "--retry",
+    "2",
+    "https://github.com/godotengine/godot-builds/releases/download/4.6-stable/Godot_v4.6-stable_macos.universal.zip",
+    "-o",
+    "fps-combat-qa/.runtime/godot.zip"
+  ],
+  "exit_code": 0,
+  "duration_seconds": 141.01401833305135
+}

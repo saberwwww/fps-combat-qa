@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa/.runtime/Godot.app/Contents/MacOS/Godot",
+    "--headless",
+    "--path",
+    "/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa/.runtime/game",
+    "res://tests/net_host.tscn"
+  ],
+  "cwd": "/Users/saber/Documents/ChatGPT/测试开发",
+  "started_utc": "2026-11-13T05:25:35.279868+00:00",
+  "duration_seconds": 15.43,
+  "exit_code": 1,
+  "timed_out": false,
+  "timeout_seconds": 25,
+  "platform": "macOS-26.0-arm64-arm-64bit-Mach-O"
+}

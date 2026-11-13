@@ -1,0 +1,19 @@
+{
+	"checks": 1,
+	"failed": 0,
+	"results": [
+		{
+			"actual": {
+				"peer_null": true,
+				"roster": 0,
+				"signal": true
+			},
+			"expected": "server disconnect signal clears client peer and roster",
+			"id": "N07",
+			"passed": true
+		}
+	],
+	"role": "client",
+	"scenario": "server-drop",
+	"suite": "network"
+}

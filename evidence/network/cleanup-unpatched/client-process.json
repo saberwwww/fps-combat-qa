@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa/.runtime/Godot.app/Contents/MacOS/Godot",
+    "--headless",
+    "--path",
+    "/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa/.runtime/game",
+    "res://tests/qa/network.tscn",
+    "--",
+    "--role=client",
+    "--scenario=combat",
+    "--port=55852",
+    "--report=/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa/evidence/network/cleanup-unpatched/client-report.json"
+  ],
+  "cwd": "/Users/saber/Documents/ChatGPT/测试开发",
+  "started_utc": "2026-11-13T05:27:02.158593+00:00",
+  "duration_seconds": 1.539,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 40,
+  "platform": "macOS-26.0-arm64-arm-64bit-Mach-O"
+}

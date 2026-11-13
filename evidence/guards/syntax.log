@@ -1,0 +1,6 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+SCRIPT ERROR: Parse Error: Expected closing ")" after function parameters.
+          at: GDScript::reload (res://tests/qa/guard_syntax.gd:2)
+ERROR: Failed to load script "res://tests/qa/guard_syntax.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:2907)

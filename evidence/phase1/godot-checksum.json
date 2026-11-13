@@ -1,0 +1,6 @@
+{
+  "asset": "Godot_v4.6-stable_macos.universal.zip",
+  "expected_sha512": "589ac663552253e93dc34d741bbc280f9e23e050f5cd79ec6bb8586d55114fbb71539d0e630d0af6c0f7fb4352e562a5b0666b3c7cb5d4bef9f7514fdce130ef",
+  "actual_sha512": "589ac663552253e93dc34d741bbc280f9e23e050f5cd79ec6bb8586d55114fbb71539d0e630d0af6c0f7fb4352e562a5b0666b3c7cb5d4bef9f7514fdce130ef",
+  "match": true
+}

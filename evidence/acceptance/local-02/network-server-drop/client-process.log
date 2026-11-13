@@ -1,0 +1,5 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+Missions: loaded 7 mission(s)
+QA_CHECK {"actual":{"peer_null":true,"roster":0,"signal":true},"expected":"server disconnect signal clears client peer and roster","id":"N07","passed":true}
+QA_SUMMARY {"checks":1,"failed":0,"results":[{"actual":{"peer_null":true,"roster":0,"signal":true},"expected":"server disconnect signal clears client peer and roster","id":"N07","passed":true}],"role":"client","scenario":"server-drop","suite":"network"}

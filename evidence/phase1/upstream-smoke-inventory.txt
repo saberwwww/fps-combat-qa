@@ -1,0 +1,245 @@
+2: ## Headless smoke test. Run with:
+3: ##   .tools/godot --headless res://tests/smoke.tscn
+4: ## Hosts a co-op match, spawns the world, and reports what came alive.
+19: # Default port first; fall back to alternates if it's busy (e.g. a game is running
+20: # locally on the default port), so the test isn't blocked by a live session.
+43: # Let bots think/move for a moment to exercise navigation + shooting.
+51: # Verify the local player can actually fire (loadout equipped + ammo consumed).
+58: # Keep the stationary test player off the bots' target list so it survives the
+59: # combat-feedback checks (otherwise the now-tougher enemies pick it off).
+69: # Firing runs in _process; hold the trigger over a generous window so it ticks even under
+70: # CI load (0.6s was too short there and flaked — green locally, red on a loaded runner).
+78: # Directly exercise the damage-feedback path (floating number + signal +
+79: # crosshair hitmarker), independent of headless AI/aim timing.
+86: # Verify the red damage-flash overlay fires when the local player is hit.
+92: # Minimap must have a real (non-zero) size or it draws nothing.
+100: # Force a known-alive, full-health state (bots may have downed the dummy)
+101: # and prime the HUD's last-health so the drop registers as damage.
+112: # Verify spawn selection keeps new spawns clear of existing combatants
+113: # (overlapping spawns are what launched players into the air).
+129: # Verify audio assets load and playback paths don't error.
+138: # Body-part hitboxes: a ray into a bot's head hitbox resolves to mult >= 2, and the
+139: # head box sits near the top of the visible model. Try every living bot and pass if
+140: # any gives a clean head hit (a single bot can be occluded/mid-stride).
+152: # Probe from several directions so an idle-posed limb can't hide the head.
+161: # Alignment: head box near the top of the VISIBLE model (not at chest height).
+182: # Crouch: _apply_crouch shrinks the capsule and lowers the head.
+193: # Hitbox edge coverage: a shot near the body's side (x=0.38, beyond the old
+194: # narrow torso) now resolves to a hitbox instead of missing.
+209: # Grenades: throwing decrements ammo and spawns a grenade in the world.
+222: # Grenade detonation FX: the burst spawns fire + smoke particle systems.
+237: # Collect-quest progress: the tracker shows how many of N are carried (2/4).
+269: # Settings autoload present + applied.
+273: # Choppable trees: a tree is destructible; felling it drops wood + can regrow.
+298: # Rocks: a boulder is also a destructible prop that drops stone.
+321: # Trash piles: destructible, spill random loot (count total pickups grow).
+336: # Torch / jetpack / campfire fuel / money / follower recruiting.
+339: # Torch + jetpack are gadgets that start with a full fuel tank.
+341: # Campfire burns down and can be fed.
+351: # Cash: a money pickup collects straight into the coin wallet (not the backpack).
+365: # Follower: recruit a non-hostile bot -> joins the player's side.
+377: # The follower should lock onto a raider that's near the player.
+389: # Shovel: craftable, and digging carves a real hole into the terrain heightmap
+390: # (lowers the ground), rather than spawning a tunnel structure.
+402: # No-ammo fallback: a melee swing is always available, and the starter pistol
+403: # carries an infinite reserve so a reload never leaves you with nothing to fire.
+410: # Emulate the reload-from-empty math five times; reserve must never fall.
+416: # Slain hostiles drop cash on death; you drop your purse when you die.
+418: # Witness rule: a silent, unwitnessed kill of a friendly leaves its faction friendly;
+419: # a kill seen by a nearby friendly (with line of sight) turns the faction hostile.
+446: # Boats: an amphibious drivable boat that implements the vehicle interface and
+447: # is reachable by the player/bot driving code (group "vehicle"), placed at shores.
+459: # Floating islands: the procedural terrain builds reachable sky-islands with loot
+460: # caches and moors boats at the shore (checked on a throwaway terrain instance,
+461: # since the live map here may be a non-procedural template).
+464: # Scrap sources: barrels, abandoned wrecks and a scrapyard landmark, plus per-type
+465: # prop health (barrels/wrecks) so the metal economy is plentiful.
+469: # Giants: a colossal hostile archetype that attacks (and is attacked by) everyone.
+476: # Actually spawn a titan and confirm the profile applies (oversized model + enlarged
+477: # movement collider), so the colossus is real in-game and not just a config entry.
+489: # Melee, not guns; and the collider is lifted to its feet (no floating).
+491: # Health bar shows on the host (authority) when hurt and a player is near.
+498: # Bot damage is softened against the player (halved + capped, no one-shots), while
+499: # player-vs-player / own weapons are unaffected. Bots have negative ids.
+513: # Tuning: pistol is less accurate now, and the torch recipe costs 2 wood.
+524: # Map templates: a preset (fixed seed+size+theme+climate) builds a valid, repeatable
+525: # world — same seed -> same terrain.
+553: # Adaptive music: the Music autoload sets up its bus + crossfades to combat.
+565: # Wildlife: an animal is a shootable combatant that drops meat on death.
+583: # Line-of-sight: a predator can't bite through a wall. Place a wolf and a target a
+584: # few metres apart, drop a solid wall (layer 1) between them, and confirm the LOS
+585: # ray is blocked — then clear it and confirm the ray is open again.
+612: # Archetypes: grenadier + sniper profiles exist with distinct behaviours.
+619: # Crafting: recipes defined; with materials in the pack, a no-fire recipe crafts.
+625: # Bandage = 2 hide -> medkit (no fire needed).
+635: # Cooking needs fire: should be blocked without a campfire.
+640: # Deploy a campfire, then cooking is allowed.
+652: # Gadgets + grenade types: item defs, gadget slot equip + Q toggle, grenade variant
+653: # spawn, and a couple of effect behaviours.
+660: # Item defs exist for every gadget + grenade type.
+668: # Equip a flashlight to the gadget slot and toggle it with the gadget API.
+680: # Binoculars set glassing; scanner sets a reveal window.
+690: # Grenade variants spawn with the right type and the field scene loads.
+704: # A bot can be stunned (flashbang).
+712: # Type-aware grenades: equipping a frag while carrying a smoke must count/throw
+713: # only frags — the smoke is never spent as a frag (regression guard).
+737: # Immersion pass: quality setting, cinematic environment, reverb bus, camera shake.
+747: # Cinematic env: a fresh map's WorldEnvironment has fog + AGX tonemap.
+756: # Blood FX scene loads + spawns particles.
+766: # Enemy variety: spawning a "heavy" yields a tougher bot than the default.
+776: # Pickups: present in the map; heal + weapon-grant effects work.
+786: # Non-flat map: highlands builds, bakes a navmesh, has multi-height spawns.
+800: # New maps bake navmeshes.
+813: # Compound buildings: a point inside a building is reachable on the navmesh
+814: # (i.e. the doorway connects the interior to the rest of the map).
+829: # Events log builds without error for both kills and quest events.
+839: # Huge vehicle map bakes a navmesh and places vehicles.
+851: # Vehicle physics: applying throttle moves the car.
+875: # Damaged car smokes; enough damage destroys it.
+886: # Car model variants: outpost places vehicles with cycling model_index.
+904: # Flip: an overturned car rights itself when flipped.
+931: # Bullet holes: impacts leave a decal in the "bullet_hole" group.
+939: # Crash damage: a high-speed collision damages the car.
+953: # Helicopter: ascends with vertical throttle and the gun fires without error.
+968: # Bots shoot enemy-occupied vehicles (e.g. a player flying a heli).
+973: # Isolate the bot high in the air and freeze it, so nothing (other bots, terrain)
+974: # sits between its muzzle and the target — otherwise the shot can hit a teammate
+975: # and the check is flaky.
+981: # Place the target directly in front of the muzzle (bot faces -Z), clear LOS.
+988: # Zero spread => dead-centre shot; deterministic.
+999: # Domination: a control point counts team presence + scoring increments.
+1017: # Team helpers + friendly fire rule.
+1021: # Team scoreboard: grouped rows (team headers) build without error in a team mode.
+1026: # header row + 2 team headers (squad/hostiles) + one row per combatant.
+1031: # Co-op downed/revive: lethal damage downs (not kills); granting a life revives.
+1043: # New co-op objective entities: destructible target, escort VIP, boss archetype.
+1069: # Battle Royale: storm-wall geometry, storm damage to anyone caught outside,
+1070: # is_battle_royale/mode_name, and last-standing never ending with a full lobby.
+1112: # Massive Wasteland map bakes a navmesh, spreads spawns and places vehicles.
+1129: # Adventure: mode helpers, needs drain over time, starvation damage, eat/drink restore.
+1158: # Safe start bubble: roaming raiders keep out of a radius around the start village and
+1159: # around living players, so a freshly-spawned player isn't immediately swarmed.
+1168: # start passed as ZERO so only the living-player rule applies here.
+1174: # Adventure backpack: spatial grid placement, no-overlap, capacity, use, drop.
+1184: # Long guns are 2x1 (2 cells each) -> 4 used of 16.
+1186: # Footprints: long guns 2x1, pistol 1x1.
+1188: # Fill the 4x4 grid with 2x1 guns; exactly eight fit, a ninth must not.
+1193: # Rotation: a 2x1 gun swaps to 1x2 in place and back; a 1x1 item can't rotate.
+1218: # Debug helpers backing the solo [0] menu: stat setters clamp to their range, item
+1219: # spawn lands in the pack, and noclip toggles the player's world collision off/on.
+1232: # Debug spawn drops items in the WORLD in front of you, not into the backpack.
+1246: # Procedural Adventure terrain: seeded heightmap mesh + collision + biome navmesh,
+1247: # water plane, scattered props, flattened POI/village sites and spawns.
+1269: # Medium+ maps park vehicles at villages; the world-map image bakes; ladders add
+1270: # navmesh links so bots can climb.
+1288: # Landforms: theme keyword -> landform mapping, table completeness, and that "plains"
+1289: # actually flattens the relief compared with the default "rolling" (so flat lands,
+1290: # cities, dungeons etc. build visibly different terrain, not just re-tinted grassland).
+1310: # Relief comparison via the pure height function (no mesh/navmesh bake needed).
+1331: # Named prompt features: keyword extraction (size + "near" relation), canonicalisation,
+1332: # height shaping (a mountain raises the land, a lake carves below water), and "near"
+1333: # placement (a crash site lands beside its anchor mountain).
+1355: # Height shaping (pure function).
+1363: # "near" placement resolves the crash site beside the mountain.
+1383: # ComfyUI asset bridge (opt-in, off by default): the pure helpers work with no server —
+1384: # key sanitising, cache paths, deterministic seeds, workflow build (prompt injected +
+1385: # valid JSON), graceful empty for an unconfigured 3D kind, and /history parsing.
+1387: # ComfyUI is mandatory (ships with the game) — always enabled.
+1401: # Model path is derived from the bundled checkpoints folder (next to the binary) and
+1402: # ends with the model filename; no local file exists in the test env.
+1406: # extra_model_paths.yaml is written pointing ComfyUI at the bundled checkpoints folder.
+1412: # Auto-install: _extract_zip unpacks a .zip bundle into a folder.
+1429: # Adventure start: an empty loadout fires safely (unarmed) and equipping a weapon
+1430: # from the backpack fills a free slot (rather than replacing slot 0).
+1435: # Loadout is a fixed 3 slots; empty == all "" (no weapon in any slot).
+1440: # Fills the first free slot (slot 0 here), not by growing the array.
+1442: # Slot-targeted equip: a second gun lands in the exact slot requested,
+1443: # leaving holes (slot 1 stays empty between rifle@0 and shotgun@2).
+1449: # Backpack grid: move validation (onto an item fails, to a free cell ok) + the
+1450: # UI binds the grid to the player and redraws without error.
+1471: # Adventure factions: hostility rules + provocation, NPC faction plumbing, and
+1472: # distance-activation toggling a bot's physics.
+1505: # Adventure NPC identities: NameGen, name/role plumbing through spawn, greeting.
+1528: # NPC negotiation buttons: a friendly NPC heals/gives/follows; commands order followers;
+1529: # an unfriendly NPC refuses to heal.
+1545: # npc_can gates the dialog's contextual accept button: friendly + hurt -> heal offered.
+1560: # Unfriendly NPC refuses to heal (recruited NPC is faction "player", not friendly).
+1571: # Adventure quests: hunt completion via kills, offer/accept, tracker text.
+1606: # Per-mission difficulty: a Hard quest is worth more and labels correctly; the new
+1607: # recon/sabotage types are registered.
+1631: # label appears in the tracker text for an active quest
+1638: # Dynamic quests: nothing auto-assigned at start, offers trickle in / expire, a
+1639: # timed delivery can fail, distress calls complete when the attackers fall, and
+1640: # the new mission types are registered.
+1649: # An Elder to hold offers + a poi marker for site-based quests.
+1672: # Expiry: age an available offer past the TTL.
+1682: # Courier fail: deadline already passed -> a process tick marks it failed.
+1692: # Distress: spawns attackers + auto-active quest; killing them all completes it.
+1711: # Quiet the unused-var warning path (elder keeps living in the world).
+1715: # Improvements batch: perks, trade values + coin persistence, day/night tick,
+1716: # marker sync, save snapshot round-trip.
+1719: # Perks: lifetime points earn perk points; buying applies to the player.
+1726: # Trade: item values + coins flow through apply/capture.
+1732: # Day/night: a long tick moves the clock, finds the sun, and bounds night.
+1735: # Marker sync RPC path (call_local form runs the handler directly here).
+1744: # Save snapshot round-trip: capture -> restore puts the player back.
+1760: # Grenades as Adventure inventory items: count = Extra slot + backpack, must be
+1761: # equipped to throw, and throws spend the backpack before the equipped reserve.
+1773: # Three loose grenades: not throwable — and the throw count reads 0 — until one is
+1774: # equipped (the count reflects the equipped type only, so nothing equipped = 0).
+1783: # Equipping moves one to the gear slot — total unchanged, now throwable.
+1798: # Adventure story: offline fallback produces all keys, and the LLM-response parser
+1799: # extracts our story JSON from an OpenAI-style chat reply.
+1812: # LLM name pools: NameGen draws unique people from a pool, then falls back.
+1822: # Per-world themed faction names: seeded generator is deterministic + distinct across
+1823: # seeds; set_adventure_factions installs/sorts them and drops the reserved raiders key;
+1824: # the LLM-reply parser tolerates a JSON array and a plain bulleted list.
+1847: # Equipment: equip armor (zone damage reduction), equip/unequip a weapon, and
+1848: # verify worn armor cuts that zone's incoming damage.
+1854: # Equip body armor from the backpack -> goes to the body slot, leaves the grid.
+1858: # Armor is an extra-HP buffer: a torso hit drains armor (health untouched while it
+1859: # lasts); a head hit (no helmet) hits health directly.
+1860: # Positive attacker id = non-enemy source, so the raw (unscaled) damage is tested.
+1867: # Overflow + break: a hit past the vest's 80 hp destroys it and spills onto health
+1868: # (kept non-lethal so later tests still have a live player).
+1872: # Equip a weapon -> fills a gun slot; unequip -> back to the backpack.
+1884: # Weapon loadout: fixed 3 slots, first-empty fill, slot-targeted equip with holes,
+1885: # remove leaves a hole, all-full replaces current, move/swap, switch skips empty.
+1910: # Player-level: equip_item into a chosen slot swaps the displaced gun to the pack.
+1925: # Pistol-only Adventure start: _fill_adventure_start adds no extra gear and zeroes
+1926: # grenades (you spawn with just the equipped pistol).
+1935: # Run stats + events log: firing tracks shots, the Stats tab builds rows, and a
+1936: # completed quest broadcasts an event line + pops the celebration banner.
+1950: # Quest completion -> world.broadcast_event -> events log line + celebration.
+1957: # Clear the events log first — earlier tests may have filled it to its cap,
+1958: # where adding a line frees the oldest and the count stops growing.
+1973: # Terrain depth: climate biomes are diverse, vegetation/buildings/caves populate the
+1974: # nav region, and the same seed rebuilds an identical heightmap (co-op / save safety).
+1994: # Trees/rocks render via a shared MultiMesh now; count the prop bodies themselves.
+1997: # The MultiMesh batches all prop visuals into one instance.
+2004: # Theme drives a deterministic climate (cold themes -> colder, jungle -> denser).
+2016: # Swimming + oxygen: air drains underwater, refills at the surface, and you drown
+2017: # (take damage) once it hits zero.
+2035: # Ladders: the terrain places watchtower ladders, and the player detects the one
+2036: # it's standing in.
+2061: # Bots swim: a bot whose body is below the water surface enters the buoyancy state
+2062: # (floats / steers across water rather than sinking).
+2077: # Character profiles: create (kit seeds gear), apply to player, capture progress
+2078: # back, and delete. The save file round-trips through user://characters/.
+2103: # Quest target marker: a raider that's the focus of an active hunt quest gets a
+2104: # visible world marker; pickups build a distinct shape (not just a box).
+2128: # Quest giver gets a "!" marker (offers are stance-filtered, so force friendly).
+2146: # Pickup shapes: a non-weapon pickup builds several meshes (a recognisable shape),
+2147: # not a single box.
+2160: # Fall damage: a hard landing (high airborne speed) costs health; the accumulator
+2161: # resets afterwards. A nav snap pulls an off-map point back onto the navmesh.
+2167: # A hard landing (high airborne speed) hurts; a gentle one doesn't; resets after.
+2187: # Adventure death: drops carried items as loot and resets the backpack/gear to a
+2188: # fresh start (pistol only).
+2205: # Tiny adventures: the smallest map size builds a (smaller) world that still bakes
+2206: # a navmesh and has a few villages.
+2227: # AI model presets: the menu offers a tiny..huge embedded-model lineup, each with a
+2228: # download URL and a .gguf filename, and selecting one drives Settings.
+2237: # Tiny and Huge are distinct files (the selector actually changes the model).
+2243: print("SMOKE: DONE ok=", players >= 1 and bots >= 1 and nav >= 1 and fired_ok and sig[0] and damage_number_ok and flash_ok and audio_ok and spawn_clear and headshot_ok and highlands_ok and crouch_ok and coverage_ok and grenade_ok and settings_ok and variety_ok and pickup_ok and team_helpers_ok and revive_ok and scoreboard_ok and new_maps_ok and killfeed_ok and interior_ok and huge_ok and vehicle_ok and destroy_ok and variant_ok and handling_ok and flip_ok and smoke_ok and hole_ok and crash_ok and heli_ok and bot_veh_ok and dom_ok and objectives_ok and br_ok and wasteland_ok and survival_ok and safe_zone_ok and inventory_ok and debug_ok and terrain_ok and landform_ok and features_ok and comfyui_ok and survival_start_ok and inv_ui_ok and factions_ok and npc_ident_ok and npc_negotiate_ok and quests_ok and story_ok and faction_names_ok and equip_ok and minimap_ok and loadout_ok and pistol_start_ok and stats_ok and terrain_depth_ok and ai_models_ok and swim_ok and ladder_ok and bot_swim_ok and characters_ok and tiny_map_ok and quest_mark_ok and pickup_shape_ok and fall_ok and snap_ok and death_drop_ok and missions_ok and dynamic_ok and improve_ok and nade_item_ok and nade_fx_ok and collect_ok and immersion_ok and gear_ok and wildlife_ok and archetype_ok and craft_ok and music_ok and tree_ok and preset_ok and extras_ok)
+2244: get_tree().quit()

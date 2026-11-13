@@ -1,0 +1,44 @@
+name: FPS QA Regression
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      inject_failure:
+        description: 'Controlled mutation: consume two bullets; expected red run'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          submodules: recursive
+      - name: Run pinned Godot regression gate
+        env:
+          INJECT_FAILURE: ${{ inputs.inject_failure || false }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "$INJECT_FAILURE" = "true" ]; then args+=(--inject-failure); fi
+          python3 scripts/run.py --out evidence/ci-current "${args[@]}"
+      - name: Publish execution summary
+        if: always()
+        run: |
+          if [ -f evidence/ci-current/summary.md ]; then
+            cat evidence/ci-current/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Runner did not produce a summary; inspect raw job logs.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Preserve raw logs, JSON and JUnit
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: fps-qa-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence/ci-current/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,19 @@
+{
+	"checks": 1,
+	"duration_ms": 114,
+	"failed": 1,
+	"results": [
+		{
+			"actual": {
+				"ammo": {
+
+				},
+				"canceled_immediately": false
+			},
+			"expected": "removing last gun cancels pending reload safely",
+			"id": "W14",
+			"passed": false
+		}
+	],
+	"suite": "combat"
+}

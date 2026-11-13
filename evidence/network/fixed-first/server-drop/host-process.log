@@ -1,0 +1,5 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+Missions: loaded 7 mission(s)
+QA_HOST_READY port=56486
+QA_SUMMARY {"checks":0,"failed":0,"results":[],"role":"host","scenario":"server-drop","suite":"network"}

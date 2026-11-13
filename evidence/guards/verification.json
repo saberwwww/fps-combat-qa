@@ -1,0 +1,38 @@
+[
+  {
+    "fault": "runtime",
+    "detected": true,
+    "issues": [
+      "SCRIPT ERROR: Invalid access to property or key 'missing' on a base object of type 'Dictionary'."
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "fault": "syntax",
+    "detected": true,
+    "issues": [
+      "SCRIPT ERROR: Parse Error: Expected closing \")\" after function parameters.",
+      "ERROR: Failed to load script \"res://tests/qa/guard_syntax.gd\" with error \"Parse error\"."
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "fault": "timeout",
+    "detected": true,
+    "issues": [
+      "timeout",
+      "exit=-15"
+    ],
+    "exit_code": -15,
+    "timed_out": true
+  },
+  {
+    "fault": "missing report",
+    "detected": true,
+    "issues": [
+      "nonexistent-report.json: missing/invalid report: [Errno 2] No such file or directory: '/Users/saber/Documents/ChatGPT/\u6d4b\u8bd5\u5f00\u53d1/fps-combat-qa/evidence/guards/nonexistent-report.json'"
+    ]
+  }
+]

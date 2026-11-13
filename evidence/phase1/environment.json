@@ -1,0 +1,7 @@
+{
+  "platform": "macOS-26.0-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "godot_preinstalled": false,
+  "upstream_commit": "7259140487946532af8310723392cca34a4fb0bb"
+}

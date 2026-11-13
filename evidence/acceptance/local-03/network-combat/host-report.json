@@ -1,0 +1,223 @@
+{
+	"checks": 6,
+	"failed": 0,
+	"results": [
+		{
+			"actual": {
+				"client": {
+					"config": {
+						"bot_count": 0,
+						"bot_skill": 1.0,
+						"frag_limit": 77,
+						"map": "res://maps/arena.tscn",
+						"mission_id": "",
+						"mode": 0,
+						"time_limit": 600
+					},
+					"names": {
+						"1": "QAHost",
+						"1941993709": "QAClient"
+					},
+					"players": {
+
+					},
+					"scores": []
+				},
+				"host": {
+					"config": {
+						"bot_count": 0,
+						"bot_skill": 1.0,
+						"frag_limit": 77,
+						"map": "res://maps/arena.tscn",
+						"mission_id": "",
+						"mode": 0,
+						"time_limit": 600
+					},
+					"names": {
+						"1": "QAHost",
+						"1941993709": "QAClient"
+					},
+					"players": {
+
+					},
+					"scores": []
+				}
+			},
+			"expected": "same peer ids, names and exact config on both processes",
+			"id": "N01",
+			"passed": true
+		},
+		{
+			"actual": {
+				"client": {
+					"1": {
+						"authority": 1,
+						"hp": 100.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 100.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 0
+					}
+				},
+				"host": {
+					"1": {
+						"authority": 1,
+						"hp": 100.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 100.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 0
+					}
+				}
+			},
+			"expected": "two actual spawned players, matching authority/team/name/HP/weapon",
+			"id": "N02",
+			"passed": true
+		},
+		{
+			"actual": {
+				"client": {
+					"1": {
+						"authority": 1,
+						"hp": 100.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 100.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 2
+					}
+				},
+				"host": {
+					"1": {
+						"authority": 1,
+						"hp": 100.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 100.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 2
+					}
+				}
+			},
+			"expected": "client pistol switch replicated to host",
+			"id": "N03",
+			"passed": true
+		},
+		{
+			"actual": {
+				"client": {
+					"1": {
+						"authority": 1,
+						"hp": 100.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 76.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 2
+					}
+				},
+				"host": {
+					"1": {
+						"authority": 1,
+						"hp": 100.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 76.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 2
+					}
+				}
+			},
+			"expected": "host hit routes to client authority and 76 HP returns to host",
+			"id": "N04",
+			"passed": true
+		},
+		{
+			"actual": {
+				"client": {
+					"1": {
+						"authority": 1,
+						"hp": 83.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 76.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 2
+					}
+				},
+				"host": {
+					"1": {
+						"authority": 1,
+						"hp": 83.0,
+						"name": "QAHost",
+						"team": 1,
+						"weapon": 0
+					},
+					"1941993709": {
+						"authority": 1941993709,
+						"hp": 76.0,
+						"name": "QAClient",
+						"team": 1941993709,
+						"weapon": 2
+					}
+				}
+			},
+			"expected": "client hit routes to host authority and 83 HP reaches client",
+			"id": "N05",
+			"passed": true
+		},
+		{
+			"actual": {
+				"departed": 1941993709,
+				"roster_count": 1,
+				"scores": [
+					1
+				],
+				"world_count": 1
+			},
+			"expected": "departed client removed from Net roster, world and scoreboard",
+			"id": "N06",
+			"passed": true
+		}
+	],
+	"role": "host",
+	"scenario": "combat",
+	"suite": "network"
+}

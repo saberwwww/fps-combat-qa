@@ -1,0 +1,7 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+Missions: loaded 7 mission(s)
+SCRIPT ERROR: Invalid access to property or key 'missing' on a base object of type 'Dictionary'.
+          at: fault (res://tests/qa/guard_runtime.gd:7)
+          GDScript backtrace (most recent call first):
+              [0] fault (res://tests/qa/guard_runtime.gd:7)

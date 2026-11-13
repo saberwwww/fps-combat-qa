@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/rokasjasonas/openfire",
+  "commit": "7259140487946532af8310723392cca34a4fb0bb",
+  "game_version": "0.2.29",
+  "engine_version": "4.6.stable",
+  "upstream_release_workflow_engine": "4.6.3.stable",
+  "code_license": "MIT",
+  "art_license_declared_by_upstream": "CC0-1.0"
+}

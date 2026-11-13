@@ -1,0 +1,26 @@
+--- a/scripts/world/world.gd
++++ b/scripts/world/world.gd
+@@ -42,6 +42,7 @@
+ 
+ func _ready() -> void:
+ 	add_to_group("world")
++	Net.players_changed.connect(_prune_departed_players)
+ 	spawner.spawn_function = Callable(self, "_spawn_combatant")
+ 	_load_map()
+ 	Game.match_active = true
+@@ -68,6 +69,15 @@
+ 		# never arrives, fall back so we don't hang on an empty world.
+ 		if Game.is_adventure():
+ 			get_tree().create_timer(30.0).timeout.connect(func(): _apply_climate(String(Game.config.get("climate", ""))))
++
++## Host owns spawned nodes; roster removal must also despawn the abandoned avatar.
++func _prune_departed_players() -> void:
++	if not Net.is_host():
++		return
++	for node in $Combatants.get_children():
++		if node.is_in_group("player") and not Net.players.has(int(node.combatant_id)):
++			Game.unregister_combatant(int(node.combatant_id))
++			node.queue_free()  # MultiplayerSpawner propagates despawn to remaining peers.
+ 
+ func _load_map() -> void:
+ 	var map_path: String = Game.config["map"]

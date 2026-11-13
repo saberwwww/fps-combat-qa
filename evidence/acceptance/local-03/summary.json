@@ -1,0 +1,492 @@
+{
+  "suite": "all",
+  "success": true,
+  "cases": 32,
+  "passed": 32,
+  "failed": 0,
+  "infrastructure_errors": [],
+  "mutation": false,
+  "patched": true,
+  "results": [
+    {
+      "actual": {
+        "mag": 30,
+        "reserve": 21
+      },
+      "expected": "reload 11+40 -> 30+21, transfer only on completion",
+      "id": "W01",
+      "passed": true
+    },
+    {
+      "actual": {
+        "mag": 5,
+        "reserve": 0
+      },
+      "expected": {
+        "mag": 5,
+        "reserve": 0
+      },
+      "id": "W02",
+      "passed": true
+    },
+    {
+      "actual": {
+        "mag": 2,
+        "reserve": 0
+      },
+      "expected": "no reserve: reject reload",
+      "id": "W03",
+      "passed": true
+    },
+    {
+      "actual": {
+        "mag": 30,
+        "reserve": 120
+      },
+      "expected": "full magazine: reject reload",
+      "id": "W04",
+      "passed": true
+    },
+    {
+      "actual": {
+        "ammo": {
+          "mag": 7,
+          "reserve": 0
+        },
+        "shots": 0
+      },
+      "expected": "empty trigger starts reload without firing",
+      "id": "W05",
+      "passed": true
+    },
+    {
+      "actual": {
+        "mag": 5,
+        "pending": true,
+        "shots": 0
+      },
+      "expected": "reload blocks trigger before completion",
+      "id": "W06",
+      "passed": true
+    },
+    {
+      "actual": {
+        "rifle": {
+          "mag": 5,
+          "reserve": 20
+        },
+        "shotgun": {
+          "mag": 6,
+          "reserve": 36
+        }
+      },
+      "expected": "switch cancels reload without transferring either gun's ammo",
+      "id": "W07",
+      "passed": true
+    },
+    {
+      "actual": {
+        "ammo": {
+          "mag": 30,
+          "reserve": 15
+        },
+        "timer_unchanged": true
+      },
+      "expected": "20 repeated reloads do not restart timer or duplicate ammo",
+      "id": "W08",
+      "passed": true
+    },
+    {
+      "actual": {
+        "before_cooldown": 29,
+        "mag": 28,
+        "shots": 2
+      },
+      "expected": "held auto: second shot only after 1/9s cooldown",
+      "id": "W09",
+      "passed": true
+    },
+    {
+      "actual": {
+        "held": 11,
+        "repressed": 10
+      },
+      "expected": "held semi fires once; release and press permits next shot",
+      "id": "W10",
+      "passed": true
+    },
+    {
+      "actual": {
+        "after": 5,
+        "blocked": 6
+      },
+      "expected": "switch preserves shared cooldown until elapsed",
+      "id": "W11",
+      "passed": true
+    },
+    {
+      "actual": {
+        "ammo": {},
+        "shots": 0
+      },
+      "expected": "unarmed: input safe, no ammo or shots",
+      "id": "W12",
+      "passed": true
+    },
+    {
+      "actual": {
+        "ammo": {
+          "mag": 12,
+          "reserve": 0
+        },
+        "shots": 1
+      },
+      "expected": "infinite reserve refills at zero; magazine still consumes a bullet",
+      "id": "W13",
+      "passed": true
+    },
+    {
+      "actual": {
+        "ammo": {},
+        "canceled_immediately": true
+      },
+      "expected": "removing last gun cancels pending reload safely",
+      "id": "W14",
+      "passed": true
+    },
+    {
+      "actual": {
+        "index": 0,
+        "reloading": true
+      },
+      "expected": "invalid or empty switch leaves current gun and reload intact",
+      "id": "W15",
+      "passed": true
+    },
+    {
+      "actual": {
+        "ammo": {
+          "mag": 30,
+          "reserve": 120
+        },
+        "dead": false,
+        "died": true,
+        "hp": 100.0
+      },
+      "expected": "lethal PvP hit then deathmatch respawn restores health and finite ammo",
+      "id": "W16",
+      "passed": true
+    },
+    {
+      "actual": {
+        "pistol": 24.0,
+        "rifle": 17.0,
+        "smg": 12.0,
+        "sniper": 95.0
+      },
+      "expected": {
+        "pistol": 24,
+        "rifle": 17,
+        "smg": 12,
+        "sniper": 95
+      },
+      "id": "D01",
+      "passed": true
+    },
+    {
+      "actual": {
+        "health": 57.5
+      },
+      "expected": "rifle head 17 x 2.5 = 42.5",
+      "id": "D02",
+      "passed": true
+    },
+    {
+      "actual": {
+        "health": 87.25
+      },
+      "expected": "rifle legs 17 x 0.75 = 12.75",
+      "id": "D03",
+      "passed": true
+    },
+    {
+      "actual": {
+        "hp": 100.0,
+        "mag": 29
+      },
+      "expected": "world collision blocks damage, shot consumes ammo",
+      "id": "D04",
+      "passed": true
+    },
+    {
+      "actual": {
+        "enemy_hp": 100.0,
+        "friend_hp": 100.0,
+        "mag": 29
+      },
+      "expected": "same-team target takes no damage and does not allow penetration",
+      "id": "D05",
+      "passed": true
+    },
+    {
+      "actual": {
+        "hp": 19.0,
+        "mag": 5,
+        "shots": 1
+      },
+      "expected": "seeded close torso shot: 9 pellets x 9 damage, one shell",
+      "id": "D06",
+      "passed": true
+    },
+    {
+      "actual": [
+        5.0,
+        100.0
+      ],
+      "expected": "sniper range 300m: torso at 299 hits, 301 misses (front face +/-0.4m)",
+      "id": "D07",
+      "passed": true
+    },
+    {
+      "actual": {
+        "dead": true,
+        "hitboxes_off": true,
+        "hp": 0.0,
+        "kills": 1
+      },
+      "expected": "death clamps HP, removes hitboxes; repeat damage does not rescore",
+      "id": "D08",
+      "passed": true
+    },
+    {
+      "actual": {
+        "dead": true,
+        "mag": 30,
+        "shots": 0
+      },
+      "expected": "dead player trigger cannot fire",
+      "id": "D09",
+      "passed": true
+    },
+    {
+      "actual": {
+        "client": {
+          "config": {
+            "bot_count": 0,
+            "bot_skill": 1.0,
+            "frag_limit": 77,
+            "map": "res://maps/arena.tscn",
+            "mission_id": "",
+            "mode": 0,
+            "time_limit": 600
+          },
+          "names": {
+            "1": "QAHost",
+            "1941993709": "QAClient"
+          },
+          "players": {},
+          "scores": []
+        },
+        "host": {
+          "config": {
+            "bot_count": 0,
+            "bot_skill": 1.0,
+            "frag_limit": 77,
+            "map": "res://maps/arena.tscn",
+            "mission_id": "",
+            "mode": 0,
+            "time_limit": 600
+          },
+          "names": {
+            "1": "QAHost",
+            "1941993709": "QAClient"
+          },
+          "players": {},
+          "scores": []
+        }
+      },
+      "expected": "same peer ids, names and exact config on both processes",
+      "id": "N01",
+      "passed": true
+    },
+    {
+      "actual": {
+        "client": {
+          "1": {
+            "authority": 1,
+            "hp": 100.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 100.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 0
+          }
+        },
+        "host": {
+          "1": {
+            "authority": 1,
+            "hp": 100.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 100.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 0
+          }
+        }
+      },
+      "expected": "two actual spawned players, matching authority/team/name/HP/weapon",
+      "id": "N02",
+      "passed": true
+    },
+    {
+      "actual": {
+        "client": {
+          "1": {
+            "authority": 1,
+            "hp": 100.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 100.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 2
+          }
+        },
+        "host": {
+          "1": {
+            "authority": 1,
+            "hp": 100.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 100.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 2
+          }
+        }
+      },
+      "expected": "client pistol switch replicated to host",
+      "id": "N03",
+      "passed": true
+    },
+    {
+      "actual": {
+        "client": {
+          "1": {
+            "authority": 1,
+            "hp": 100.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 76.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 2
+          }
+        },
+        "host": {
+          "1": {
+            "authority": 1,
+            "hp": 100.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 76.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 2
+          }
+        }
+      },
+      "expected": "host hit routes to client authority and 76 HP returns to host",
+      "id": "N04",
+      "passed": true
+    },
+    {
+      "actual": {
+        "client": {
+          "1": {
+            "authority": 1,
+            "hp": 83.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 76.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 2
+          }
+        },
+        "host": {
+          "1": {
+            "authority": 1,
+            "hp": 83.0,
+            "name": "QAHost",
+            "team": 1,
+            "weapon": 0
+          },
+          "1941993709": {
+            "authority": 1941993709,
+            "hp": 76.0,
+            "name": "QAClient",
+            "team": 1941993709,
+            "weapon": 2
+          }
+        }
+      },
+      "expected": "client hit routes to host authority and 83 HP reaches client",
+      "id": "N05",
+      "passed": true
+    },
+    {
+      "actual": {
+        "departed": 1941993709,
+        "roster_count": 1,
+        "scores": [
+          1
+        ],
+        "world_count": 1
+      },
+      "expected": "departed client removed from Net roster, world and scoreboard",
+      "id": "N06",
+      "passed": true
+    },
+    {
+      "actual": {
+        "peer_null": true,
+        "roster": 0,
+        "signal": true
+      },
+      "expected": "server disconnect signal clears client peer and roster",
+      "id": "N07",
+      "passed": true
+    }
+  ]
+}

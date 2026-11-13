@@ -1,0 +1,45 @@
+{
+  "upstream_commit": "7259140487946532af8310723392cca34a4fb0bb",
+  "patched": true,
+  "changes": [
+    {
+      "path": "addons/nobodywho/nobodywho.gdextension",
+      "reason": "optional native LLM libraries absent; same fallback as upstream release workflow"
+    },
+    {
+      "path": "project.godot",
+      "reason": "dedicated FPSCombatQA/20261113 user data directory; gameplay settings unchanged"
+    },
+    {
+      "patch": "001-test-exit-codes.patch",
+      "sha256": "367fbe88bb4dfbd2f8431f29b67d56d77a43e09860295ccdcea59a94d7d86e52"
+    },
+    {
+      "patch": "002-cancel-unarmed-reload.patch",
+      "sha256": "3c2fd91b4d09c1baceeb4bbc3815b48ae4e71240b9adcb5a787fe06cea34bcc0"
+    },
+    {
+      "patch": "003-despawn-departed-player.patch",
+      "sha256": "cead58555718046b9d448aad7940f0cb6b8896b39b796b7468937d6651bd821d"
+    }
+  ],
+  "engine": "4.6.stable.official.89cea1439",
+  "source_sha256": {
+    "scripts/baseline_network.py": "3d7890fbdad2bc1f25e4b7e70b8d7c20c1172c1005697c6338f6da434564b774",
+    "scripts/bootstrap.py": "4c5e7ce427af201c3c6feda0de44c7b56b56eeb76b7ecc1eae49e4920e439e7f",
+    "scripts/capture.py": "2e46b974c0e0b7434a303dd4d377e3450b5c7106f986927ec0564fc5d3eda70c",
+    "scripts/exit_experiment.py": "bf230ecaa7eaa20ce374d6d51919bafd28dcaab2a8dedfff23010b463c2a090c",
+    "scripts/gate_selftest.py": "01106e6265def888992a8f0ddb1fff08c012dbcea951a15f8f1b57dba837d722",
+    "scripts/network_run.py": "f81763ccb58b82c263d4f651187749da72d064fbe28f59385bf593ac7f0debdf",
+    "scripts/prepare.py": "cf9a098241575f8612179797f179298557fb127cfa603da52a8ee9c95118d75f",
+    "scripts/run.py": "9f135830e1b0d74fde966069e9fd20af1315e2d8e079ddad1e180c98498379dc",
+    "tests/combat.gd": "a23779b5cc412e52f5a1c41a67be06b5462fa591f940302fef12ac4ec60097e4",
+    "tests/combat.tscn": "a732a6ecc1d43bb84b6d720698a3e18bb00374a05128c2315762ff48f3bf42cf",
+    "tests/network.gd": "22be7d4ecd8b745c0c0bf38566a650f8c63a8f8a9830ac60aa99b2f27da130a6",
+    "tests/network.tscn": "35c2ae747240f97ef212b23be034c62d56e34aef6a14d02414131d5246151a7e",
+    "patches/001-test-exit-codes.patch": "367fbe88bb4dfbd2f8431f29b67d56d77a43e09860295ccdcea59a94d7d86e52",
+    "patches/002-cancel-unarmed-reload.patch": "3c2fd91b4d09c1baceeb4bbc3815b48ae4e71240b9adcb5a787fe06cea34bcc0",
+    "patches/003-despawn-departed-player.patch": "cead58555718046b9d448aad7940f0cb6b8896b39b796b7468937d6651bd821d"
+  },
+  "mutation": "consume two bullets instead of one (controlled injection)"
+}

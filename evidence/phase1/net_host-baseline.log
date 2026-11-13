@@ -1,0 +1,63 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+Missions: loaded 7 mission(s)
+NETHOST: hosting on 27015
+NETHOST: peers after wait = 2
+NETHOST: starting match
+WARNING: Source geometry parsing for navigation mesh baking had to parse RenderingServer meshes at runtime.
+		This poses a significant performance issues as visual meshes store geometry data on the GPU and transferring this data back to the CPU blocks the rendering.
+		For runtime (re)baking navigation meshes use and parse collision shapes as source geometry or create geometry data procedurally in scripts.
+     at: add_mesh (scene/resources/3d/navigation_mesh_source_geometry_data_3d.cpp:204)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:86)
+         [2] _ready (res://scripts/world/world.gd:46)
+         [3] _load_world (res://tests/net_host.gd:42)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:86)
+         [2] _ready (res://scripts/world/world.gd:46)
+         [3] _load_world (res://tests/net_host.gd:42)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:86)
+         [2] _ready (res://scripts/world/world.gd:46)
+         [3] _load_world (res://tests/net_host.gd:42)
+NETHOST: net_players=1 world_players=2 bots=2
+NETHOST: DONE
+ERROR: Attempt to call RPC with unknown peer ID: 1101874996.
+   at: _send_rpc (modules/multiplayer/scene_rpc_interface.cpp:316)
+   GDScript backtrace (most recent call first):
+       [0] hit (res://scripts/player/player.gd:1801)
+       [1] _shoot_at (res://scripts/ai/bot.gd:1024)
+       [2] _do_attack (res://scripts/ai/bot.gd:799)
+       [3] _physics_process (res://scripts/ai/bot.gd:444)
+ERROR: Attempt to call RPC with unknown peer ID: 1101874996.
+   at: _send_rpc (modules/multiplayer/scene_rpc_interface.cpp:316)
+   GDScript backtrace (most recent call first):
+       [0] hit (res://scripts/player/player.gd:1801)
+       [1] _shoot_at (res://scripts/ai/bot.gd:1024)
+       [2] _do_attack (res://scripts/ai/bot.gd:799)
+       [3] _physics_process (res://scripts/ai/bot.gd:444)
+ERROR: Attempt to call RPC with unknown peer ID: 1101874996.
+   at: _send_rpc (modules/multiplayer/scene_rpc_interface.cpp:316)
+   GDScript backtrace (most recent call first):
+       [0] hit (res://scripts/player/player.gd:1801)
+       [1] _shoot_at (res://scripts/ai/bot.gd:1024)
+       [2] _do_attack (res://scripts/ai/bot.gd:799)
+       [3] _physics_process (res://scripts/ai/bot.gd:444)
+ERROR: Attempt to call RPC with unknown peer ID: 1101874996.
+   at: _send_rpc (modules/multiplayer/scene_rpc_interface.cpp:316)
+   GDScript backtrace (most recent call first):
+       [0] hit (res://scripts/player/player.gd:1801)
+       [1] _shoot_at (res://scripts/ai/bot.gd:1024)
+       [2] _do_attack (res://scripts/ai/bot.gd:799)
+       [3] _physics_process (res://scripts/ai/bot.gd:444)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 2 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

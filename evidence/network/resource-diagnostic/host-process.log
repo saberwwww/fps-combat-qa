@@ -1,0 +1,166 @@
+WorkerThreadPool: 10 threads, 3 max low-priority.
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Unrecognized output string "misc2" in mapping:
+030000007e0500006920000001010000,Nintendo Switch 2 Pro Controller,a:b0,b:b1,back:b14,dpdown:b8,dpleft:b10,dpright:b9,dpup:b11,guide:b16,leftshoulder:b12,leftstick:b15,lefttrigger:b13,leftx:a0,lefty:a1~,misc1:b17,misc2:b20,paddle1:b18,paddle2:b19,rightshoulder:b4,rightstick:b7,righttrigger:b5,rightx:a2,righty:a3~,start:b6,x:b2,y:b3,platform:Mac OS X,
+SDL: Init OK!
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 3663110324
+EDITOR API HASH: 835956462
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://resources/default_env.tres
+Loading resource: res://scripts/autoload/game.gd
+Loading resource: res://scripts/autoload/net.gd
+Loading resource: res://scripts/autoload/missions.gd
+Loading resource: res://scripts/autoload/weapon_db.gd
+Loading resource: res://scripts/autoload/item_db.gd
+Loading resource: res://scripts/autoload/characters.gd
+Loading resource: res://scripts/autoload/name_gen.gd
+Loading resource: res://scripts/autoload/llm.gd
+Loading resource: res://scripts/autoload/story.gd
+Loading resource: res://scripts/autoload/comfyui.gd
+Loading resource: res://scripts/autoload/audio.gd
+Loading resource: res://scripts/autoload/music.gd
+Loaded system CA certificates
+Loading resource: res://tests/qa/network.tscn
+Loading resource: res://tests/qa/network.gd
+Missions: loaded 7 mission(s)
+Loading resource: res://assets/audio/music_calm.wav
+Loading resource: res://.godot/imported/music_calm.wav-d3a77e52e6a32c585b8df238f112681b.sample
+Loading resource: res://assets/audio/music_combat.wav
+Loading resource: res://.godot/imported/music_combat.wav-92c6e6eed47e69d31b01b7fdc4ee0a7e.sample
+QA_HOST_READY port=60727
+Socket error: 61.
+Connection to remote host failed.
+QA_CHECK {"actual":{"client":{"config":{"bot_count":0,"bot_skill":1.0,"frag_limit":77,"map":"res://maps/arena.tscn","mission_id":"","mode":0,"time_limit":600},"names":{"1":"QAHost","1174834135":"QAClient"},"players":{},"scores":[]},"host":{"config":{"bot_count":0,"bot_skill":1.0,"frag_limit":77,"map":"res://maps/arena.tscn","mission_id":"","mode":0,"time_limit":600},"names":{"1":"QAHost","1174834135":"QAClient"},"players":{},"scores":[]}},"expected":"same peer ids, names and exact config on both processes","id":"N01","passed":true}
+Loading resource: res://scenes/world.tscn
+Loading resource: res://scripts/world/world.gd
+Loading resource: res://scenes/player.tscn
+Loading resource: res://scripts/player/player.gd
+Loading resource: res://scenes/grenade.tscn
+Loading resource: res://scripts/combat/grenade.gd
+Loading resource: res://scenes/fx/grenade_field.tscn
+Loading resource: res://scripts/combat/grenade_field.gd
+Loading resource: res://assets/models/weapons/grenade-a.glb
+Loading resource: res://.godot/imported/grenade-a.glb-adaad924079ac4aae51d8dd2deb97668.scn
+Loading resource: res://assets/models/weapons/Textures/colormap.png
+Loading resource: res://.godot/imported/colormap.png-9b65e001ec29b3cfbe09dda77fb698cd.ctex
+Loading resource: res://scenes/pickup.tscn
+Loading resource: res://scripts/world/pickup.gd
+Loading resource: res://scenes/campfire.tscn
+Loading resource: res://scripts/world/campfire.gd
+Loading resource: res://scripts/player/weapon_manager.gd
+Loading resource: res://scenes/fx/impact.tscn
+Loading resource: res://scenes/fx/blood.tscn
+Loading resource: res://assets/models/characters/character-a.glb
+Loading resource: res://.godot/imported/character-a.glb-fac554a7516cd0ea466795598fd9efea.scn
+Loading resource: res://assets/models/characters/Textures/texture-a.png
+Loading resource: res://.godot/imported/texture-a.png-04f96b2eb31e65e0fcdd5f917985ef9a.ctex
+Loading resource: res://scenes/bot.tscn
+Loading resource: res://scripts/ai/bot.gd
+Loading resource: res://assets/models/characters/character-m.glb
+Loading resource: res://.godot/imported/character-m.glb-09a1c0a8ce371c7839b089151ea35e2b.scn
+Loading resource: res://assets/models/characters/Textures/texture-m.png
+Loading resource: res://.godot/imported/texture-m.png-cdd909af13e7957a1b8eada99d058dd0.ctex
+Loading resource: res://scenes/animal.tscn
+Loading resource: res://scripts/world/animal.gd
+Loading resource: res://scenes/ui/hud.tscn
+Loading resource: res://scripts/ui/hud.gd
+Loading resource: res://scripts/ui/crosshair.gd
+Loading resource: res://scripts/ui/damage_direction.gd
+Loading resource: res://scripts/ui/minimap.gd
+Loading resource: res://scripts/ui/backpack_grid.gd
+Loading resource: res://scripts/ui/equip_panel.gd
+Loading resource: res://scripts/ui/world_map.gd
+Loading resource: res://shaders/postfx.gdshader
+Loading resource: res://shaders/lowhealth.gdshader
+Loading resource: res://maps/arena.tscn
+Loading resource: res://scripts/world/arena.gd
+Loading resource: res://scenes/vehicle.tscn
+Loading resource: res://scripts/world/vehicle.gd
+Loading resource: res://assets/models/vehicles/suv.glb
+Loading resource: res://.godot/imported/suv.glb-e03b3fac86ef624e940cafd326377de5.scn
+Loading resource: res://assets/models/vehicles/Textures/colormap.png
+Loading resource: res://.godot/imported/colormap.png-49ee3d855407e0b293544ec045a8f0a8.ctex
+Loading resource: res://scenes/helicopter.tscn
+Loading resource: res://scripts/world/helicopter.gd
+Loading resource: res://scenes/boat.tscn
+Loading resource: res://scripts/world/boat.gd
+Loading resource: res://assets/kenney/prototype-textures/PNG/Dark/texture_13.png
+Loading resource: res://.godot/imported/texture_13.png-2a1b69333c7bcb01c8aef9b4f7802056.ctex
+Loading resource: res://assets/kenney/prototype-textures/PNG/Orange/texture_13.png
+Loading resource: res://.godot/imported/texture_13.png-113ab29263a1dc00d2686500d7e747e8.ctex
+Loading resource: res://assets/kenney/prototype-textures/PNG/Purple/texture_13.png
+Loading resource: res://.godot/imported/texture_13.png-b7210425c48bd9d9732c7411353095d7.ctex
+Loading resource: res://assets/kenney/prototype-textures/PNG/Green/texture_13.png
+Loading resource: res://.godot/imported/texture_13.png-7b1598530e5d609b6852b5056bb31fc5.ctex
+Loading resource: res://assets/models/weapons/crate-medium.glb
+Loading resource: res://.godot/imported/crate-medium.glb-020c801f1efe91445b4a64c4e672f941.scn
+Loading resource: res://assets/models/weapons/crate-wide.glb
+Loading resource: res://.godot/imported/crate-wide.glb-36e99b373c771763d147d5b68037504f.scn
+Loading resource: res://assets/models/weapons/crate-small.glb
+Loading resource: res://.godot/imported/crate-small.glb-967f34f6d0f9ccbe6293d87667314b1d.scn
+Loading resource: res://assets/models/weapons/blaster-r.glb
+Loading resource: res://.godot/imported/blaster-r.glb-0802d69ad7c6078674dcc7d0855a0891.scn
+Loading resource: res://assets/models/weapons/grenade-b.glb
+Loading resource: res://.godot/imported/grenade-b.glb-57190e08270fd12ac80d18bc8b1bf398.scn
+Loading resource: res://assets/models/weapons/grenade-b.glb
+Loading resource: res://.godot/imported/grenade-b.glb-57190e08270fd12ac80d18bc8b1bf398.scn
+Loading resource: res://assets/models/weapons/blaster-h.glb
+Loading resource: res://.godot/imported/blaster-h.glb-387a15333d70bf6337d6edbe19d90a95.scn
+WARNING: Source geometry parsing for navigation mesh baking had to parse RenderingServer meshes at runtime.
+		This poses a significant performance issues as visual meshes store geometry data on the GPU and transferring this data back to the CPU blocks the rendering.
+		For runtime (re)baking navigation meshes use and parse collision shapes as source geometry or create geometry data procedurally in scripts.
+     at: add_mesh (scene/resources/3d/navigation_mesh_source_geometry_data_3d.cpp:204)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:96)
+         [2] _ready (res://scripts/world/world.gd:47)
+         [3] load_world (res://tests/qa/network.gd:55)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:366)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:96)
+         [2] _ready (res://scripts/world/world.gd:47)
+         [3] load_world (res://tests/qa/network.gd:55)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+     at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:369)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/world/map_base.gd:43)
+         [1] _load_map (res://scripts/world/world.gd:96)
+         [2] _ready (res://scripts/world/world.gd:47)
+         [3] load_world (res://tests/qa/network.gd:55)
+Loading resource: res://assets/models/weapons/blaster-a.glb
+Loading resource: res://.godot/imported/blaster-a.glb-f5ac48a1b9d525910e74554f58c1626d.scn
+Loading resource: res://assets/models/weapons/blaster-a.glb
+Loading resource: res://.godot/imported/blaster-a.glb-f5ac48a1b9d525910e74554f58c1626d.scn
+QA_CHECK {"actual":{"client":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":0}},"host":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":0}}},"expected":"two actual spawned players, matching authority/team/name/HP/weapon","id":"N02","passed":true}
+Loading resource: res://assets/models/weapons/blaster-c.glb
+Loading resource: res://.godot/imported/blaster-c.glb-019f863946273536fdd5bfe24ace9724.scn
+QA_CHECK {"actual":{"client":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":2}},"host":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":2}}},"expected":"client pistol switch replicated to host","id":"N03","passed":true}
+QA_CHECK {"actual":{"client":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}},"host":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}}},"expected":"host hit routes to client authority and 76 HP returns to host","id":"N04","passed":true}
+Loading resource: res://assets/audio/hurt.ogg
+Loading resource: res://.godot/imported/hurt.ogg-ea18d271f180b366b5e5793b35ab5c57.oggvorbisstr
+QA_CHECK {"actual":{"client":{"1":{"authority":1,"hp":83.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}},"host":{"1":{"authority":1,"hp":83.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}}},"expected":"client hit routes to host authority and 83 HP reaches client","id":"N05","passed":true}
+QA_CHECK {"actual":{"departed":1174834135,"roster_count":1,"scores":[1],"world_count":1},"expected":"departed client removed from Net roster, world and scoreboard","id":"N06","passed":true}
+QA_SUMMARY {"checks":6,"failed":0,"results":[{"actual":{"client":{"config":{"bot_count":0,"bot_skill":1.0,"frag_limit":77,"map":"res://maps/arena.tscn","mission_id":"","mode":0,"time_limit":600},"names":{"1":"QAHost","1174834135":"QAClient"},"players":{},"scores":[]},"host":{"config":{"bot_count":0,"bot_skill":1.0,"frag_limit":77,"map":"res://maps/arena.tscn","mission_id":"","mode":0,"time_limit":600},"names":{"1":"QAHost","1174834135":"QAClient"},"players":{},"scores":[]}},"expected":"same peer ids, names and exact config on both processes","id":"N01","passed":true},{"actual":{"client":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":0}},"host":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":0}}},"expected":"two actual spawned players, matching authority/team/name/HP/weapon","id":"N02","passed":true},{"actual":{"client":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":2}},"host":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":100.0,"name":"QAClient","team":1174834135,"weapon":2}}},"expected":"client pistol switch replicated to host","id":"N03","passed":true},{"actual":{"client":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}},"host":{"1":{"authority":1,"hp":100.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}}},"expected":"host hit routes to client authority and 76 HP returns to host","id":"N04","passed":true},{"actual":{"client":{"1":{"authority":1,"hp":83.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}},"host":{"1":{"authority":1,"hp":83.0,"name":"QAHost","team":1,"weapon":0},"1174834135":{"authority":1174834135,"hp":76.0,"name":"QAClient","team":1174834135,"weapon":2}}},"expected":"client hit routes to host authority and 83 HP reaches client","id":"N05","passed":true},{"actual":{"departed":1174834135,"roster_count":1,"scores":[1],"world_count":1},"expected":"departed client removed from Net roster, world and scoreboard","id":"N06","passed":true}],"role":"host","scenario":"combat","suite":"network"}
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+Leaked instance: AudioStreamWAV:9223372075425596972 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372075643700783 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372143423654291 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372143440431508 - Reference count: 1
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+ERROR: 2 resources still in use at exit.
+   at: clear (core/io/resource.cpp:805)
+Resource still in use: res://assets/audio/music_calm.wav (AudioStreamWAV)
+Resource still in use: res://assets/audio/music_combat.wav (AudioStreamWAV)
+Orphan StringName: Music (static: 0, total: 6)
+StringName: 1 unclaimed string names at exit.

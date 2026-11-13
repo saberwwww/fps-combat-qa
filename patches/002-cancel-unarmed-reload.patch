@@ -1,0 +1,10 @@
+--- a/scripts/player/weapon_manager.gd
++++ b/scripts/player/weapon_manager.gd
+@@ -152,6 +152,7 @@
+ 	loadout[i] = ""
+ 	ammo.erase(id)
+ 	if not _has_weapon():
++		_reloading = false  # no remaining weapon can complete the pending reload
+ 		if _model:
+ 			_model.queue_free()
+ 			_model = null

@@ -1,0 +1,25 @@
+--- a/tests/smoke.gd
++++ b/tests/smoke.gd
+@@ -2240,8 +2240,9 @@
+ 	print("SMOKE: ai_models_ok=", ai_models_ok, " presets=", presets.size())
+ 
+ 	print("SMOKE: fire_works=", fired_ok, " damage_signal=", sig[0], " damage_number=", damage_number_ok, " hit_flash=", flash_ok, " audio=", audio_ok, " headshot=", headshot_ok, " highlands=", highlands_ok)
+-	print("SMOKE: DONE ok=", players >= 1 and bots >= 1 and nav >= 1 and fired_ok and sig[0] and damage_number_ok and flash_ok and audio_ok and spawn_clear and headshot_ok and highlands_ok and crouch_ok and coverage_ok and grenade_ok and settings_ok and variety_ok and pickup_ok and team_helpers_ok and revive_ok and scoreboard_ok and new_maps_ok and killfeed_ok and interior_ok and huge_ok and vehicle_ok and destroy_ok and variant_ok and handling_ok and flip_ok and smoke_ok and hole_ok and crash_ok and heli_ok and bot_veh_ok and dom_ok and objectives_ok and br_ok and wasteland_ok and survival_ok and safe_zone_ok and inventory_ok and debug_ok and terrain_ok and landform_ok and features_ok and comfyui_ok and survival_start_ok and inv_ui_ok and factions_ok and npc_ident_ok and npc_negotiate_ok and quests_ok and story_ok and faction_names_ok and equip_ok and minimap_ok and loadout_ok and pistol_start_ok and stats_ok and terrain_depth_ok and ai_models_ok and swim_ok and ladder_ok and bot_swim_ok and characters_ok and tiny_map_ok and quest_mark_ok and pickup_shape_ok and fall_ok and snap_ok and death_drop_ok and missions_ok and dynamic_ok and improve_ok and nade_item_ok and nade_fx_ok and collect_ok and immersion_ok and gear_ok and wildlife_ok and archetype_ok and craft_ok and music_ok and tree_ok and preset_ok and extras_ok)
+-	get_tree().quit()
++	var qa_ok: bool = players >= 1 and bots >= 1 and nav >= 1 and fired_ok and sig[0] and damage_number_ok and flash_ok and audio_ok and spawn_clear and headshot_ok and highlands_ok and crouch_ok and coverage_ok and grenade_ok and settings_ok and variety_ok and pickup_ok and team_helpers_ok and revive_ok and scoreboard_ok and new_maps_ok and killfeed_ok and interior_ok and huge_ok and vehicle_ok and destroy_ok and variant_ok and handling_ok and flip_ok and smoke_ok and hole_ok and crash_ok and heli_ok and bot_veh_ok and dom_ok and objectives_ok and br_ok and wasteland_ok and survival_ok and safe_zone_ok and inventory_ok and debug_ok and terrain_ok and landform_ok and features_ok and comfyui_ok and survival_start_ok and inv_ui_ok and factions_ok and npc_ident_ok and npc_negotiate_ok and quests_ok and story_ok and faction_names_ok and equip_ok and minimap_ok and loadout_ok and pistol_start_ok and stats_ok and terrain_depth_ok and ai_models_ok and swim_ok and ladder_ok and bot_swim_ok and characters_ok and tiny_map_ok and quest_mark_ok and pickup_shape_ok and fall_ok and snap_ok and death_drop_ok and missions_ok and dynamic_ok and improve_ok and nade_item_ok and nade_fx_ok and collect_ok and immersion_ok and gear_ok and wildlife_ok and archetype_ok and craft_ok and music_ok and tree_ok and preset_ok and extras_ok
++	print("SMOKE: DONE ok=", qa_ok)
++	get_tree().quit(0 if qa_ok else 1)
+ 
+ func _count_label3d() -> int:
+ 	var n := 0
+--- a/tests/net_host.gd
++++ b/tests/net_host.gd
+@@ -24,7 +24,7 @@
+ 	print("NETHOST: peers after wait = ", Net.players.size())
+ 	if Net.players.size() < 2:
+ 		print("NETHOST: no client connected — FAIL")
+-		get_tree().quit()
++		get_tree().quit(1)
+ 		return
+ 	print("NETHOST: starting match")
+ 	Net.start_match()

@@ -1,0 +1,18 @@
+Godot Engine v4.6.stable.official.89cea1439 - https://godotengine.org
+
+Missions: loaded 7 mission(s)
+QA_BEGIN W14 remove_during_reload
+SCRIPT ERROR: Invalid access to property or key of type 'String' on a base object of type 'Dictionary'.
+          at: _finish_reload (res://scripts/player/weapon_manager.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _finish_reload (res://scripts/player/weapon_manager.gd:269)
+              [1] _process (res://scripts/player/weapon_manager.gd:252)
+              [2] tick (res://tests/qa/combat.gd:49)
+              [3] remove_during_reload (res://tests/qa/combat.gd:209)
+              [4] fresh (res://tests/qa/combat.gd:46)
+QA_CHECK {"actual":{"ammo":{},"canceled_immediately":false},"expected":"removing last gun cancels pending reload safely","id":"W14","passed":false}
+QA_SUMMARY {"checks":1,"duration_ms":114,"failed":1,"results":[{"actual":{"ammo":{},"canceled_immediately":false},"expected":"removing last gun cancels pending reload safely","id":"W14","passed":false}],"suite":"combat"}
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 2 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

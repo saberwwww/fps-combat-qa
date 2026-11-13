@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "https://github.com/rokasjasonas/openfire.git",
+    "fps-combat-qa/upstream/openfire"
+  ],
+  "exit_code": 0,
+  "duration_seconds": 8.54832312464714,
+  "platform": "macOS-26.0-arm64-arm-64bit-Mach-O"
+}
