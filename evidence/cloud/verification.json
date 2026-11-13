@@ -1,0 +1,27 @@
+{
+  "verified_against_downloaded_artifacts": true,
+  "normal": {
+    "run_id": 43374453786,
+    "conclusion": "success",
+    "cases": 32,
+    "passed": 32
+  },
+  "controlled_mutation": {
+    "run_id": 43374544299,
+    "conclusion": "failure",
+    "cases": 32,
+    "passed": 26,
+    "failed": 6,
+    "failed_ids": [
+      "W09",
+      "W10",
+      "W11",
+      "D04",
+      "D05",
+      "D06"
+    ]
+  },
+  "artifact_uploads_succeeded": true,
+  "local_final_and_ci_source_hashes_match": true,
+  "tested_commit": "75bd637227256d4275e752b1615e8576ccced1a9"
+}

@@ -1,0 +1,220 @@
+regression	Set up job	﻿2026-11-13T05:48:52.0972963Z Current runner version: '2.338.2'
+regression	Set up job	2026-11-13T05:48:52.1004209Z ##[group]Runner Image Provisioner
+regression	Set up job	2026-11-13T05:48:52.1005203Z Hosted Compute Agent
+regression	Set up job	2026-11-13T05:48:52.1005879Z Version: 20261028.624
+regression	Set up job	2026-11-13T05:48:52.1006688Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+regression	Set up job	2026-11-13T05:48:52.1007574Z Build Date: 2026-10-28T21:51:42Z
+regression	Set up job	2026-11-13T05:48:52.1008513Z Worker ID: {545ac2ac-7dbc-4d38-9b1e-e7a08b492d52}
+regression	Set up job	2026-11-13T05:48:52.1009539Z Region: eastus2
+regression	Set up job	2026-11-13T05:48:52.1010324Z Cloud: Azure
+regression	Set up job	2026-11-13T05:48:52.1010987Z ##[endgroup]
+regression	Set up job	2026-11-13T05:48:52.1012696Z ##[group]Operating System
+regression	Set up job	2026-11-13T05:48:52.1013594Z Ubuntu
+regression	Set up job	2026-11-13T05:48:52.1014224Z 24.04.5
+regression	Set up job	2026-11-13T05:48:52.1014813Z LTS
+regression	Set up job	2026-11-13T05:48:52.1015512Z ##[endgroup]
+regression	Set up job	2026-11-13T05:48:52.1016172Z ##[group]Runner Image
+regression	Set up job	2026-11-13T05:48:52.1016965Z Image: ubuntu-24.04
+regression	Set up job	2026-11-13T05:48:52.1017666Z Version: 20261101.360.1
+regression	Set up job	2026-11-13T05:48:52.1019034Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+regression	Set up job	2026-11-13T05:48:52.1022190Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+regression	Set up job	2026-11-13T05:48:52.1023470Z ##[endgroup]
+regression	Set up job	2026-11-13T05:48:52.1024792Z ##[group]GITHUB_TOKEN Permissions
+regression	Set up job	2026-11-13T05:48:52.1027313Z Contents: read
+regression	Set up job	2026-11-13T05:48:52.1028048Z Metadata: read
+regression	Set up job	2026-11-13T05:48:52.1028748Z ##[endgroup]
+regression	Set up job	2026-11-13T05:48:52.1031520Z Secret source: Actions
+regression	Set up job	2026-11-13T05:48:52.1032676Z Cache mode: write
+regression	Set up job	2026-11-13T05:48:52.1033995Z Prepare workflow directory
+regression	Set up job	2026-11-13T05:48:52.1764679Z Prepare all required actions
+regression	Set up job	2026-11-13T05:48:52.1886170Z Getting action download info
+regression	Set up job	2026-11-13T05:48:52.4367485Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+regression	Set up job	2026-11-13T05:48:52.6456446Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+regression	Set up job	2026-11-13T05:48:53.1105849Z Complete job name: regression
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-11-13T05:48:53.1877609Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1878580Z with:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1878974Z   submodules: recursive
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1879593Z   repository: saberwwww/fps-combat-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1882794Z   token: ***
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1883195Z   ssh-strict: true
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1883597Z   ssh-user: git
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1884007Z   persist-credentials: true
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1884436Z   clean: true
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1884833Z   sparse-checkout-cone-mode: true
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1885283Z   fetch-depth: 1
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1885666Z   fetch-tags: false
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1886061Z   show-progress: true
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1886463Z   lfs: false
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1886866Z   set-safe-directory: true
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1887306Z   allow-unsafe-pr-checkout: false
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.1887933Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.5933872Z Syncing repository: saberwwww/fps-combat-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.5936686Z ##[group]Getting Git version info
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.5938091Z Working directory is '/home/runner/work/fps-combat-qa/fps-combat-qa'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.5941191Z [command]/usr/bin/git version
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6141369Z git version 2.56.0
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6214224Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6238701Z Temporarily overriding HOME='/home/runner/work/_temp/99cb0b0c-e879-461e-b35c-01700bdafd1a' before making global git config changes
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6241994Z Adding repository directory to the temporary git global config as a safe directory
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6244700Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/fps-combat-qa/fps-combat-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6303211Z Deleting the contents of '/home/runner/work/fps-combat-qa/fps-combat-qa'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6307638Z ##[group]Initializing the repository
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6320869Z [command]/usr/bin/git init /home/runner/work/fps-combat-qa/fps-combat-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6443727Z hint: Using 'master' as the name for the initial branch. This default branch name
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6448925Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6469050Z hint: to use in all of your new repositories, which will suppress this warning,
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6597772Z hint: call:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6599790Z hint:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6601957Z hint: 	git config --global init.defaultBranch <name>
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6604137Z hint:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6606366Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6609290Z hint: 'development'. The just-created branch can be renamed via this command:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6612087Z hint:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6613579Z hint: 	git branch -m <name>
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6615451Z hint:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6617487Z hint: Disable this message with "git config set advice.defaultBranchName false"
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6621410Z Initialized empty Git repository in /home/runner/work/fps-combat-qa/fps-combat-qa/.git/
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6631381Z [command]/usr/bin/git remote add origin https://github.com/saberwwww/fps-combat-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6638726Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6641269Z ##[group]Disabling automatic garbage collection
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6643113Z [command]/usr/bin/git config --local gc.auto 0
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6646809Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6648581Z ##[group]Setting up auth
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6707716Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.6796776Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7134962Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7152318Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7384947Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7425918Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7647210Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7695049Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7697386Z ##[group]Fetching the repository
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:53.7708362Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +75bd637227256d4275e752b1615e8576ccced1a9:refs/remotes/origin/codex/fps-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1002052Z From https://github.com/saberwwww/fps-combat-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1125659Z  * [new ref]         75bd637227256d4275e752b1615e8576ccced1a9 -> origin/codex/fps-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1141580Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1144577Z ##[group]Determining the checkout info
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1147191Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1150348Z [command]/usr/bin/git sparse-checkout disable
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1154029Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1158244Z ##[group]Checking out the ref
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1160683Z [command]/usr/bin/git checkout --progress --force -B codex/fps-qa refs/remotes/origin/codex/fps-qa
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1296566Z Switched to a new branch 'codex/fps-qa'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1331757Z branch 'codex/fps-qa' set up to track 'origin/codex/fps-qa'.
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1352259Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1354651Z ##[group]Setting up auth for fetching submodules
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1357690Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1445474Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1515751Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1594255Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-84119644@github.com:
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1661822Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1669077Z ##[group]Fetching submodules
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1680931Z [command]/usr/bin/git submodule sync --recursive
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.1991740Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.2319139Z Submodule 'upstream/openfire' (https://github.com/rokasjasonas/openfire.git) registered for path 'upstream/openfire'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:54.2342124Z Cloning into '/home/runner/work/fps-combat-qa/fps-combat-qa/upstream/openfire'...
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1181800Z Submodule path 'upstream/openfire': checked out '7259140487946532af8310723392cca34a4fb0bb'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1225719Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1430334Z Entering 'upstream/openfire'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1485659Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1486641Z ##[group]Persisting credentials for submodules
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1492317Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1698039Z Entering 'upstream/openfire'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1754113Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1958117Z Entering 'upstream/openfire'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.1998289Z file:/home/runner/work/fps-combat-qa/fps-combat-qa/.git/modules/upstream/openfire/config	remote.origin.url
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2041603Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2274326Z Entering 'upstream/openfire'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2337440Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-84119644@github.com:'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2535238Z Entering 'upstream/openfire'
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2580960Z ##[endgroup]
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2651155Z [command]/usr/bin/git log -1 --format=%H
+regression	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:48:55.2672715Z 75bd637227256d4275e752b1615e8576ccced1a9
+regression	Run pinned Godot regression gate	﻿2026-11-13T05:48:55.2889122Z ##[group]Run set -euo pipefail
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2889737Z ^[[36;1mset -euo pipefail^[[0m
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2889961Z ^[[36;1margs=()^[[0m
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2890234Z ^[[36;1mif [ "$INJECT_FAILURE" = "true" ]; then args+=(--inject-failure); fi^[[0m
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2890638Z ^[[36;1mpython3 scripts/run.py --out evidence/ci-current "${args[@]}"^[[0m
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2910644Z shell: /usr/bin/bash -e {0}
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2910882Z env:
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2911076Z   INJECT_FAILURE: false
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.2911262Z ##[endgroup]
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.3512819Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.3513867Z                                  Dload  Upload   Total   Spent    Left  Speed
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.3514308Z 
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.4624940Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.4626103Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.5051765Z 
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.7227728Z   0 68.1M    0  109k    0     0   708k      0  0:01:38 --:--:--  0:01:38  708k
+regression	Run pinned Godot regression gate	2026-11-13T05:48:55.7228730Z 100 68.1M  100 68.1M    0     0   182M      0 --:--:-- --:--:-- --:--:--  313M
+regression	Run pinned Godot regression gate	2026-11-13T05:49:16.8600629Z /home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game
+regression	Run pinned Godot regression gate	2026-11-13T05:49:16.8603005Z {"command": ["/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64", "--headless", "--path", "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game", "--import"], "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa", "started_utc": "2026-11-13T05:48:56.716919+00:00", "duration_seconds": 20.141, "exit_code": 0, "timed_out": false, "timeout_seconds": 180, "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"}
+regression	Run pinned Godot regression gate	2026-11-13T05:49:19.4821548Z {"command": ["/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64", "--headless", "--path", "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game", "res://tests/qa/combat.tscn", "--", "--report=/home/runner/work/fps-combat-qa/fps-combat-qa/evidence/ci-current/combat-report.json"], "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa", "started_utc": "2026-11-13T05:49:16.861728+00:00", "duration_seconds": 2.62, "exit_code": 0, "timed_out": false, "timeout_seconds": 60, "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"}
+regression	Run pinned Godot regression gate	2026-11-13T05:49:22.2076091Z {"command": ["/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64", "--headless", "--path", "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game", "res://tests/qa/network.tscn", "--", "--role=host", "--scenario=combat", "--port=48615", "--report=/home/runner/work/fps-combat-qa/fps-combat-qa/evidence/ci-current/network-combat/host-report.json"], "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa", "started_utc": "2026-11-13T05:49:19.483539+00:00", "duration_seconds": 2.724, "exit_code": 0, "timed_out": false, "timeout_seconds": 45, "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"}
+regression	Run pinned Godot regression gate	2026-11-13T05:49:22.4083193Z {"command": ["/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64", "--headless", "--path", "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game", "res://tests/qa/network.tscn", "--", "--role=client", "--scenario=combat", "--port=48615", "--report=/home/runner/work/fps-combat-qa/fps-combat-qa/evidence/ci-current/network-combat/client-report.json"], "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa", "started_utc": "2026-11-13T05:49:19.685382+00:00", "duration_seconds": 2.722, "exit_code": 0, "timed_out": false, "timeout_seconds": 40, "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"}
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.3771283Z {"command": ["/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64", "--headless", "--path", "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game", "res://tests/qa/network.tscn", "--", "--role=client", "--scenario=server-drop", "--port=49069", "--report=/home/runner/work/fps-combat-qa/fps-combat-qa/evidence/ci-current/network-server-drop/client-report.json"], "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa", "started_utc": "2026-11-13T05:49:22.610242+00:00", "duration_seconds": 1.766, "exit_code": 0, "timed_out": false, "timeout_seconds": 40, "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"}
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5274840Z {"command": ["/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64", "--headless", "--path", "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game", "res://tests/qa/network.tscn", "--", "--role=host", "--scenario=server-drop", "--port=49069", "--report=/home/runner/work/fps-combat-qa/fps-combat-qa/evidence/ci-current/network-server-drop/host-report.json"], "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa", "started_utc": "2026-11-13T05:49:22.408744+00:00", "duration_seconds": 2.118, "exit_code": 0, "timed_out": false, "timeout_seconds": 45, "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"}
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5291235Z {
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5291697Z   "suite": "all",
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5292248Z   "success": true,
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5292655Z   "cases": 32,
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5293008Z   "passed": 32,
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5293357Z   "failed": 0,
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5293726Z   "infrastructure_errors": [],
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5294145Z   "mutation": false,
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5294509Z   "patched": true
+regression	Run pinned Godot regression gate	2026-11-13T05:49:24.5294853Z }
+regression	Publish execution summary	﻿2026-11-13T05:49:24.5477941Z ##[group]Run if [ -f evidence/ci-current/summary.md ]; then
+regression	Publish execution summary	2026-11-13T05:49:24.5478492Z ^[[36;1mif [ -f evidence/ci-current/summary.md ]; then^[[0m
+regression	Publish execution summary	2026-11-13T05:49:24.5478982Z ^[[36;1m  cat evidence/ci-current/summary.md >> "$GITHUB_STEP_SUMMARY"^[[0m
+regression	Publish execution summary	2026-11-13T05:49:24.5479656Z ^[[36;1melse^[[0m
+regression	Publish execution summary	2026-11-13T05:49:24.5480149Z ^[[36;1m  echo 'Runner did not produce a summary; inspect raw job logs.' >> "$GITHUB_STEP_SUMMARY"^[[0m
+regression	Publish execution summary	2026-11-13T05:49:24.5480697Z ^[[36;1mfi^[[0m
+regression	Publish execution summary	2026-11-13T05:49:24.5500727Z shell: /usr/bin/bash -e {0}
+regression	Publish execution summary	2026-11-13T05:49:24.5500961Z ##[endgroup]
+regression	Preserve raw logs, JSON and JUnit	﻿2026-11-13T05:49:24.5624934Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5625274Z with:
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5625449Z   name: fps-qa-43374453786-1
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5625651Z   path: evidence/ci-current/
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5625845Z   if-no-files-found: error
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5626042Z   retention-days: 30
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5626220Z   compression-level: 6
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5626420Z   overwrite: false
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5626596Z   include-hidden-files: false
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.5626794Z ##[endgroup]
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.7115956Z (node:2337) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.7117123Z (Use `node --trace-deprecation ...` to show where the warning was created)
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.7311431Z With the provided path, there will be 21 files uploaded
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.7313025Z Artifact name is valid!
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:24.7313481Z Root directory input is valid!
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.0732129Z Beginning upload of artifact content to blob storage
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.1200783Z (node:2337) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.1715859Z Uploaded bytes 24978
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.1903235Z Finished uploading artifact content to blob storage!
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.1904239Z SHA256 digest of uploaded artifact zip is c281688ef9fe4a60d0708cd8983a7a3548a2bf662ec5bb9278e72a6d31314cb8
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.1905244Z Finalizing artifact upload
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.5114720Z Artifact fps-qa-43374453786-1.zip successfully finalized. Artifact ID 14013084719
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.5115766Z Artifact fps-qa-43374453786-1 has been successfully uploaded! Final size is 24978 bytes. Artifact ID is 14013084719
+regression	Preserve raw logs, JSON and JUnit	2026-11-13T05:49:25.5143113Z Artifact download URL: https://github.com/saberwwww/fps-combat-qa/actions/runs/43374453786/artifacts/14013084719
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-11-13T05:49:25.5368828Z Post job cleanup.
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6170474Z [command]/usr/bin/git version
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6234140Z git version 2.56.0
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6282296Z Temporarily overriding HOME='/home/runner/work/_temp/fbfa7129-6168-4f37-8908-f1411777041c' before making global git config changes
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6292910Z Adding repository directory to the temporary git global config as a safe directory
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6294004Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/fps-combat-qa/fps-combat-qa
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6350682Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6413731Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6700991Z Entering 'upstream/openfire'
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6790705Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6819847Z http.https://github.com/.extraheader
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6863134Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.6876606Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7250899Z Entering 'upstream/openfire'
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7310638Z http.https://github.com/.extraheader
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7418183Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7493449Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7789868Z Entering 'upstream/openfire'
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7811757Z file:/home/runner/work/fps-combat-qa/fps-combat-qa/.git/modules/upstream/openfire/config	remote.origin.url
+regression	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-11-13T05:49:25.7870323Z [command]/usr/bin/git config --file /home/runner/work/fps-combat-qa/fps-combat-qa/.git/modules/upstream/openfire/config --name-only --get-regexp ^includeIf\.gitdir:
+regression	Complete job	﻿2026-11-13T05:49:25.8103024Z Cleaning up orphan processes
+regression	Complete job	2026-11-13T05:49:25.8402037Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

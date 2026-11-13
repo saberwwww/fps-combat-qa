@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64",
+    "--headless",
+    "--path",
+    "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game",
+    "--import"
+  ],
+  "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa",
+  "started_utc": "2026-11-13T05:49:49.522867+00:00",
+  "duration_seconds": 11.294,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 180,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"
+}

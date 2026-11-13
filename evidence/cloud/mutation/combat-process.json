@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/Godot_v4.6-stable_linux.x86_64",
+    "--headless",
+    "--path",
+    "/home/runner/work/fps-combat-qa/fps-combat-qa/.runtime/game",
+    "res://tests/qa/combat.tscn",
+    "--",
+    "--report=/home/runner/work/fps-combat-qa/fps-combat-qa/evidence/ci-current/combat-report.json"
+  ],
+  "cwd": "/home/runner/work/fps-combat-qa/fps-combat-qa",
+  "started_utc": "2026-11-13T05:50:00.820129+00:00",
+  "duration_seconds": 2.619,
+  "exit_code": 1,
+  "timed_out": false,
+  "timeout_seconds": 60,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"
+}

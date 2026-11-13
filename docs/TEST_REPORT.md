@@ -9,6 +9,7 @@
 | `evidence/acceptance/local-01` | 32 | 0 | 0 | 通过 |
 | `evidence/acceptance/local-02` | 32 | 0 | 0 | 通过 |
 | `evidence/acceptance/local-03` | 32 | 0 | 0 | 通过 |
+| `evidence/acceptance/local-final`（最终代码） | 32 | 0 | 0 | 通过 |
 | `evidence/acceptance/mutation-01`（受控注入） | 25 | 6 | exit1 | 正确拦截，预期失败 |
 
 正常每轮16武器+9伤害+7联机，独立运行副本恢复；N07重新建立另一对进程。正常门禁同时检查无SCRIPT ERROR/ERROR、退出0、未超时、报告完整。没有把基础设施实验、参数化四枪或循环20次输入计入32场景。
@@ -33,7 +34,16 @@ N06未修复：名册1、world2、score2，host exit1；修复后1/1/1。双向�
 
 ## 云端CI
 
-已提供 `.github/workflows/regression.yml`。此处在真实运行完成后补入GitHub Actions链接；**当前本文件初始状态不代表云端已通过**。正常和inject_failure=true的结果须分别核实，故障注入应使作业红。
+实际已完成，平台Ubuntu24.04，测试提交`75bd637227256d4275e752b1615e8576ccced1a9`。以下是两个独立真实运行，不是截图或人工生成的结果：
+
+| 运行 | 触发 | 断言 | Workflow结果 | 证据上传 |
+|---|---|---|---|---|
+| [43374453786](https://github.com/saberwwww/fps-combat-qa/actions/runs/43374453786) | push | **32/32**，无基础设施ERROR | **success** | success |
+| [43374544299](https://github.com/saberwwww/fps-combat-qa/actions/runs/43374544299) | workflow_dispatch，inject_failure=true | 26通过、**6失败** | **failure**（回归步骤失败） | **success** |
+
+已下载两次原始artifact到`evidence/cloud/normal`和`mutation`，作业/步骤元数据和完整作业日志在同目录上层。`verification.json`验证数字、失败ID和上传步骤；本地最终版与正常CI的测试/脚本/补丁SHA256完全一致。变异artifact ZIP的SHA256与GitHub上传日志摘要一致。
+
+仓库已公开：[fps-combat-qa](https://github.com/saberwwww/fps-combat-qa)，默认分支`codex/fps-qa`。后续提交仅补交云端证据和文档，不改变已验证测试代码。前期Git TLS/EOF失败和重试如实记录；云端运行最后实际完成。一次下载错误含短期签名地址，公开副本明确标注去掉签名query，原始传输错误日志保留于忽略的`.runtime/private-transfer-logs`，未修改任何游戏运行结果。
 
 ## 限制
 

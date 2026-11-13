@@ -1,0 +1,272 @@
+{
+	"checks": 25,
+	"duration_ms": 2376,
+	"failed": 0,
+	"results": [
+		{
+			"actual": {
+				"mag": 30,
+				"reserve": 21
+			},
+			"expected": "reload 11+40 -> 30+21, transfer only on completion",
+			"id": "W01",
+			"passed": true
+		},
+		{
+			"actual": {
+				"mag": 5,
+				"reserve": 0
+			},
+			"expected": {
+				"mag": 5,
+				"reserve": 0
+			},
+			"id": "W02",
+			"passed": true
+		},
+		{
+			"actual": {
+				"mag": 2,
+				"reserve": 0
+			},
+			"expected": "no reserve: reject reload",
+			"id": "W03",
+			"passed": true
+		},
+		{
+			"actual": {
+				"mag": 30,
+				"reserve": 120
+			},
+			"expected": "full magazine: reject reload",
+			"id": "W04",
+			"passed": true
+		},
+		{
+			"actual": {
+				"ammo": {
+					"mag": 7,
+					"reserve": 0
+				},
+				"shots": 0
+			},
+			"expected": "empty trigger starts reload without firing",
+			"id": "W05",
+			"passed": true
+		},
+		{
+			"actual": {
+				"mag": 5,
+				"pending": true,
+				"shots": 0
+			},
+			"expected": "reload blocks trigger before completion",
+			"id": "W06",
+			"passed": true
+		},
+		{
+			"actual": {
+				"rifle": {
+					"mag": 5,
+					"reserve": 20
+				},
+				"shotgun": {
+					"mag": 6,
+					"reserve": 36
+				}
+			},
+			"expected": "switch cancels reload without transferring either gun's ammo",
+			"id": "W07",
+			"passed": true
+		},
+		{
+			"actual": {
+				"ammo": {
+					"mag": 30,
+					"reserve": 15
+				},
+				"timer_unchanged": true
+			},
+			"expected": "20 repeated reloads do not restart timer or duplicate ammo",
+			"id": "W08",
+			"passed": true
+		},
+		{
+			"actual": {
+				"before_cooldown": 29,
+				"mag": 28,
+				"shots": 2
+			},
+			"expected": "held auto: second shot only after 1/9s cooldown",
+			"id": "W09",
+			"passed": true
+		},
+		{
+			"actual": {
+				"held": 11,
+				"repressed": 10
+			},
+			"expected": "held semi fires once; release and press permits next shot",
+			"id": "W10",
+			"passed": true
+		},
+		{
+			"actual": {
+				"after": 5,
+				"blocked": 6
+			},
+			"expected": "switch preserves shared cooldown until elapsed",
+			"id": "W11",
+			"passed": true
+		},
+		{
+			"actual": {
+				"ammo": {
+
+				},
+				"shots": 0
+			},
+			"expected": "unarmed: input safe, no ammo or shots",
+			"id": "W12",
+			"passed": true
+		},
+		{
+			"actual": {
+				"ammo": {
+					"mag": 12,
+					"reserve": 0
+				},
+				"shots": 1
+			},
+			"expected": "infinite reserve refills at zero; magazine still consumes a bullet",
+			"id": "W13",
+			"passed": true
+		},
+		{
+			"actual": {
+				"ammo": {
+
+				},
+				"canceled_immediately": true
+			},
+			"expected": "removing last gun cancels pending reload safely",
+			"id": "W14",
+			"passed": true
+		},
+		{
+			"actual": {
+				"index": 0,
+				"reloading": true
+			},
+			"expected": "invalid or empty switch leaves current gun and reload intact",
+			"id": "W15",
+			"passed": true
+		},
+		{
+			"actual": {
+				"ammo": {
+					"mag": 30,
+					"reserve": 120
+				},
+				"dead": false,
+				"died": true,
+				"hp": 100.0
+			},
+			"expected": "lethal PvP hit then deathmatch respawn restores health and finite ammo",
+			"id": "W16",
+			"passed": true
+		},
+		{
+			"actual": {
+				"pistol": 24.0,
+				"rifle": 17.0,
+				"smg": 12.0,
+				"sniper": 95.0
+			},
+			"expected": {
+				"pistol": 24,
+				"rifle": 17,
+				"smg": 12,
+				"sniper": 95
+			},
+			"id": "D01",
+			"passed": true
+		},
+		{
+			"actual": {
+				"health": 57.5
+			},
+			"expected": "rifle head 17 x 2.5 = 42.5",
+			"id": "D02",
+			"passed": true
+		},
+		{
+			"actual": {
+				"health": 87.25
+			},
+			"expected": "rifle legs 17 x 0.75 = 12.75",
+			"id": "D03",
+			"passed": true
+		},
+		{
+			"actual": {
+				"hp": 100.0,
+				"mag": 29
+			},
+			"expected": "world collision blocks damage, shot consumes ammo",
+			"id": "D04",
+			"passed": true
+		},
+		{
+			"actual": {
+				"enemy_hp": 100.0,
+				"friend_hp": 100.0,
+				"mag": 29
+			},
+			"expected": "same-team target takes no damage and does not allow penetration",
+			"id": "D05",
+			"passed": true
+		},
+		{
+			"actual": {
+				"hp": 19.0,
+				"mag": 5,
+				"shots": 1
+			},
+			"expected": "seeded close torso shot: 9 pellets x 9 damage, one shell",
+			"id": "D06",
+			"passed": true
+		},
+		{
+			"actual": [
+				5.0,
+				100.0
+			],
+			"expected": "sniper range 300m: torso at 299 hits, 301 misses (runtime torso half-depth 0.6m)",
+			"id": "D07",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dead": true,
+				"hitboxes_off": true,
+				"hp": 0.0,
+				"kills": 1
+			},
+			"expected": "death clamps HP, removes hitboxes; repeat damage does not rescore",
+			"id": "D08",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dead": true,
+				"mag": 30,
+				"shots": 0
+			},
+			"expected": "dead player trigger cannot fire",
+			"id": "D09",
+			"passed": true
+		}
+	],
+	"suite": "combat"
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "public_file": "evidence/cloud/mutation-download.log",
+    "original_sha256": "30e6dafbf6f86ace5f067d3586db060fa5469e99838909d0aed34cf920065dba",
+    "reason": "short-lived signed artifact download credential in transport error; not game/test output"
+  }
+]

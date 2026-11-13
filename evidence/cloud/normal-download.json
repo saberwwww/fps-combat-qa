@@ -1,0 +1,21 @@
+{
+  "command": [
+    "gh",
+    "run",
+    "download",
+    "43374453786",
+    "--repo",
+    "saberwwww/fps-combat-qa",
+    "--name",
+    "fps-qa-43374453786-1",
+    "--dir",
+    "evidence/cloud/normal"
+  ],
+  "cwd": "/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa",
+  "started_utc": "2026-11-13T05:51:26.353363+00:00",
+  "duration_seconds": 5.034,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 60.0,
+  "platform": "macOS-26.0-arm64-arm-64bit-Mach-O"
+}

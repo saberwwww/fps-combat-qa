@@ -1,0 +1,79 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-11-13T05:48:49Z",
+  "databaseId": 43374453786,
+  "event": "push",
+  "headSha": "75bd637227256d4275e752b1615e8576ccced1a9",
+  "jobs": [
+    {
+      "completedAt": "2026-11-13T05:49:26Z",
+      "conclusion": "success",
+      "databaseId": 131717557653,
+      "name": "regression",
+      "startedAt": "2026-11-13T05:48:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-13T05:48:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-13T05:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T05:48:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-11-13T05:48:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T05:49:24Z",
+          "conclusion": "success",
+          "name": "Run pinned Godot regression gate",
+          "number": 3,
+          "startedAt": "2026-11-13T05:48:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T05:49:24Z",
+          "conclusion": "success",
+          "name": "Publish execution summary",
+          "number": 4,
+          "startedAt": "2026-11-13T05:49:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T05:49:25Z",
+          "conclusion": "success",
+          "name": "Preserve raw logs, JSON and JUnit",
+          "number": 5,
+          "startedAt": "2026-11-13T05:49:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T05:49:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 10,
+          "startedAt": "2026-11-13T05:49:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T05:49:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-13T05:49:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/saberwwww/fps-combat-qa/actions/runs/43374453786/job/131717557653"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-11-13T05:49:27Z",
+  "url": "https://github.com/saberwwww/fps-combat-qa/actions/runs/43374453786"
+}

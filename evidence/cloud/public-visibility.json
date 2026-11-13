@@ -1,0 +1,22 @@
+{
+  "command": [
+    "gh",
+    "api",
+    "--method",
+    "PATCH",
+    "repos/saberwwww/fps-combat-qa",
+    "-F",
+    "private=false",
+    "-f",
+    "default_branch=codex/fps-qa",
+    "--jq",
+    "{html_url,private,default_branch}"
+  ],
+  "cwd": "/Users/saber/Documents/ChatGPT/测试开发/fps-combat-qa",
+  "started_utc": "2026-11-13T05:49:16.615840+00:00",
+  "duration_seconds": 3.549,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 30.0,
+  "platform": "macOS-26.0-arm64-arm-64bit-Mach-O"
+}
